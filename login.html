@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeLab Login</title>
+    <!-- Bootstrap RTL CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/general.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+
+<body>
+    <div class="login">
+        <div class="container-fluid">
+            <div class="row min-vh-100">
+                <!-- Right Side - Form -->
+                <div class="col-md-5 d-flex align-items-center">
+                    <div class="login__form-wrapper w-100 px-3 px-md-5">
+                        <div class="login__logo mb-4">
+                            <img src="assets/images/logo.svg" alt="CodeLab Logo" class="img-fluid">
+                        </div>
+                        <h1 class="login__title mb-2">تسجيل الدخول</h1>
+                        <p class="login__subtitle mb-4">مرحبا بكم في النظام المحاسبي</p>
+
+                        <form class="login__form needs-validation" novalidate>
+                            <div class="mb-3">
+                                <label for="username" class="login__label">اسم المستخدم</label>
+                                <input type="text" class="login__input form-control" id="username"
+                                    placeholder="اكتب الاسم" required>
+                                <!-- if the input is not valid add class is-invalid and if it is valid add class is-valid -->
+
+                                <div class="invalid-feedback">
+                                    هذا الحقل مطلوب
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="password" class="login__label">كلمة المرور</label>
+                                <div class="login__password-wrapper position-relative">
+                                    <input type="password" class="login__input form-control " id="password"
+                                        placeholder="ادخل كلمة المرور" required>
+                                    <!-- if the input is not valid add class is-invalid and if it is valid add class is-valid -->
+                                    <div class="invalid-feedback">
+                                        هذا الحقل مطلوب
+                                    </div>
+                                    <button type="button" class="login__password-toggle" id="togglePassword">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                                            <circle cx="12" cy="12" r="3" />
+                                            <line class="eye-slash d-none" x1="2" y1="2" x2="22" y2="22" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="form-check d-flex justify-content-between">
+                                    <div class="login__remember">
+                                        <input type="checkbox" class="form-check-input" id="remember">
+                                        <label class="form-check-label" for="remember">تذكرني</label>
+                                    </div>
+                                    <a href="forget-password.html" class="login__forgot">نسيت كلمة السر؟</a>
+                                </div>
+                            </div>
+                            <button type="submit" class="login__submit-btn w-100">تسجيل الدخول</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Left Side - Image -->
+                <div class="col-md-7 p-0 d-none d-md-block">
+                    <div class="login__image">
+                        <img class="w-75 p-3" src="assets/images/login-bg.svg" alt="login-bg">
+                        <div class="login__language">
+                            <div class="dropdown">
+                                <button class="login__language-btn dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="assets/images/lang-ar.svg" alt="Saudi Flag" class="login__language-flag">
+                                    عربي
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="login__language-arrow">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item active" href="#"><img src="assets/images/lang-ar.svg"
+                                                alt="Saudi Flag"> عربي</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">English</a></li>
+                                </ul>
+                            </div>
+                            <!-- <button class="login__language-btn">English</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

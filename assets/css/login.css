@@ -1,0 +1,333 @@
+/* Login Layout */
+.login__image {
+    background-image: linear-gradient(180deg, #084966, #002739);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__language {
+    position: absolute;
+    top: 1rem;
+    inset-inline-end: 1rem;
+}
+
+/* Add these styles to your existing CSS */
+.login__language-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    border: 0;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+
+    &::after {
+        display: none;
+    }
+}
+
+.login__language-flag {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.login__language-arrow {
+    width: 16px;
+    height: 16px;
+}
+
+.dropdown-menu {
+    min-width: 120px;
+    background: #fff;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.dropdown-item img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.dropdown-item {
+
+    &.active,
+    &:hover {
+        background-color: var(--color-base);
+        color: #fff;
+    }
+
+}
+
+.login__language-btn:hover {
+    background: #fff;
+    color: var(--color-base);
+}
+
+/* Form Styles */
+.login__title {
+    color: var(--color-head);
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.login__subtitle {
+    color: var(--color-label);
+    font-size: 1rem;
+}
+
+.login__label {
+    color: var(--color-label);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.login__input {
+    border: 1px solid #eee;
+    padding: 0.75rem 1rem;
+    color: var(--color-input);
+    background-color: #fff;
+}
+
+.login__input:focus {
+    border-color: var(--color-base);
+    box-shadow: 0 0 3px 0px rgba(68, 110, 138, 1);
+}
+
+.login__password-wrapper {
+    position: relative;
+}
+
+.login__password-toggle {
+    position: absolute;
+    inset-inline-end: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--color-input);
+    padding: 0;
+
+    svg {
+        stroke: #252B37;
+    }
+}
+
+.login__remember {
+    color: var(--color-label);
+}
+
+.login__forgot {
+    color: var(--color-base);
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.form-check-input:checked {
+    background-color: #182FAF;
+    border-color: #182FAF;
+}
+
+.login__submit-btn {
+    background-color: var(--color-base);
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.login__submit-btn:hover {
+    background-color: var(--color-hover);
+}
+
+.login__link {
+    color: #79818F;
+}
+
+/* remember password */
+.verification {
+    padding: 2rem 1rem;
+}
+
+.verification__title {
+    color: var(--color-head);
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.verification__text {
+    color: var(--color-label);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.verification__email {
+    color: var(--color-base);
+    direction: ltr;
+    display: inline-block;
+}
+
+.verification__inputs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.verification__input {
+    width: 25%;
+    height: 3.5rem;
+    border: 1px solid var(--color-input);
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--color-head);
+}
+
+.verification__input:focus {
+    border-color: var(--color-base);
+    outline: none;
+    box-shadow: none;
+}
+
+.verification__resend {
+    color: var(--color-label);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.verification__resend-link {
+    color: var(--color-base);
+    text-decoration: none;
+}
+
+.verification__submit {
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-base);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-family: 'Cairo', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.verification__submit:hover {
+    background: var(--color-head);
+}
+
+.verification__back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--color-label);
+    text-decoration: none;
+    margin-top: 1.5rem;
+}
+
+.success-modal {
+    border-radius: 1rem;
+    border: none;
+    padding: 2rem 1rem;
+}
+
+.success-modal__content {
+    text-align: center;
+}
+
+.success-modal__emoji {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.success-modal__title {
+    color: var(--color-head);
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.success-modal__text {
+    color: var(--color-label);
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+}
+
+.success-modal__button {
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-base);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-family: 'Cairo', sans-serif;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.success-modal__button:hover {
+    background: var(--color-head);
+}
+
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+    .login__form-wrapper {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .login__form-wrapper {
+        max-width: 100%;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .login__title {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .login__form-wrapper {
+        padding: 1.5rem;
+    }
+
+    .login__title {
+        font-size: 1.5rem;
+    }
+
+    .verification__inputs {
+        gap: 0.5rem;
+    }
+
+    .verification__input {
+        height: 3rem;
+    }
+}
