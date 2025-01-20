@@ -12,6 +12,7 @@
     --gray-200: #E9EAEB;
     --gray-100: #F5F5F5;
     --gray-50: #f8f9fa;
+    --gray-25: #f6f8f8;
 }
 
 body {
@@ -28,6 +29,9 @@ body {
     transition: width 0.3s;
     z-index: 1000;
     padding: 1rem;
+    overflow: hidden auto;
+    scrollbar-color: var(--gray-400) var(--gray-100);
+    scrollbar-width: thin;
 
     &.collapsed {
         .nav-link {
@@ -146,6 +150,10 @@ body {
     &.nav-link__settings {
         color: var(--gray-500);
     }
+
+    &.bordered {
+        border: 1px solid var(--gray-100);
+    }
 }
 
 .dropdown-item {
@@ -199,6 +207,31 @@ body {
 .navbar__logo {
     display: flex;
     align-items: center;
+
+    .nav-link.dropdown-toggle {
+        &:hover {
+            background-color: var(--gray-200);
+        }
+    }
+
+    &.navbar__logo--sidebar {
+        .nav-link {
+
+            background-color: var(--gray-25);
+            border-color: #E6EAEC;
+            border-radius: 16px;
+            -webkit-border-radius: 16px;
+            -moz-border-radius: 16px;
+            -ms-border-radius: 16px;
+            -o-border-radius: 16px;
+        }
+
+        .navbar__logo-icon {
+            background: #fff;
+            border-radius: 50px;
+            padding: 10px;
+        }
+    }
 }
 
 .navbar__logo-title {
@@ -217,6 +250,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: transparent;
+    border: 1px solid var(--gray-200);
+
+    &:hover {
+        background-color: var(--gray-100);
+    }
 }
 
 .navbar__title {
@@ -228,9 +267,30 @@ body {
     color: #333;
 }
 
+.navbar__title-sub-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .navbar__title-sub {
     font-size: 0.875rem;
-    color: #888;
+    color: var(--gray-400);
+
+    &:hover {
+        color: var(--gray-600);
+    }
+
+    &:not(:last-child)::after {
+        content: '>';
+        font-size: 0.8rem;
+        color: var(--gray-400);
+        margin-inline-start: 8px;
+    }
+
+    &:last-child {
+        color: var(--gray-900);
+    }
 }
 
 .sidebar__icon {
@@ -432,7 +492,7 @@ body {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
     th {
-        background-color: #F6F8F8;
+        background-color: var(--gray-25);
         font-weight: 500;
         font-size: 12px;
         color: var(--gray-500);
