@@ -161,24 +161,8 @@
             </a>
         </div>
     </div>
-    <div class="cookie-banner" id="cookieBanner">
-        <div class="row align-items-center">
-            <div class="col-md-8">
-                <p class="m-0"> من خلال النقر على قبول جميع ملفات جمع البيانات "كوكيز"، فإنك توافق على تخزين ملفات جمع
-                    البيانات للطرف الأول على جهازك لتسهيل تصفحك للموقع وتحليل استخدام الموقع.
-                </p>
-            </div>
-            <div class="col-md-4">
-                <div class="d-flex align-content-center">
-                    <a class="btn btn-link px-0 h-auto text_green"
-                        href="/ar/Ministry/AboutMinistry/RulesAndConditions/Pages/Policy.aspx">اتفاقية ملفات تعريف
-                        الارتباط</a>
-                    <a href="javascript:;" id="btnMewaAcceptCookies" class="btn btn-primary">موافقة</a>
-                </div>
-            </div>
-        </div>
-        <button type="button" class="btn-close" aria-label="Close"></button>
-    </div>
+
+
 
     <div class="main-content">
 
@@ -337,7 +321,7 @@
                         <div class="dashboard__search">
                             <input type="search" class="form-control" placeholder="البحث">
                         </div>
-                        <div class="d-flex gap-3">
+                        <div class="d-flex align-items-center gap-3">
                             <button class="btn btn-light dashboard__export-btn">
                                 <span class="me-2"><img src="assets/images/icons/import.svg" alt="import"></span>
                                 تصدير
@@ -496,85 +480,10 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        const ctx = document.getElementById('myChart').getContext('2d');
-        const myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو'],
-                datasets: [{
-                    label: 'إحصائيات الشهر الماضي',
-                    data: [12, 19, 3, 5, 2, 3],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-    </script>
 
 
-    <script>
-        document.getElementById('toggleSidebar').addEventListener('click', function () {
-            const sidebar = document.querySelector('.sidebar');
-            const mainContent = document.querySelector('.main-content');
 
-            if (sidebar.style.width === 'var(--sidebar-collapsed-width)') { // Sidebar is collapsed
-                sidebar.style.width = 'var(--sidebar-width)';
-                sidebar.classList.remove('collapsed');
-
-                mainContent.style.marginRight = 'var(--sidebar-width)';
-                document.querySelectorAll('.menu-text').forEach(el => el.style.display = 'flex');
-                document.querySelector('.sidebar__logo').style.display = 'block'; //logo
-                document.querySelector('.sidebar__icon').style.display = 'none'; //logo icon
-            } else {
-                sidebar.style.width = 'var(--sidebar-collapsed-width)';
-                mainContent.style.marginRight = 'var(--sidebar-collapsed-width)';
-                sidebar.classList.add('collapsed');
-
-                document.querySelectorAll('.menu-text').forEach(el => el.style.display = 'none');
-                document.querySelector('.sidebar__logo').style.display = 'none';
-                document.querySelector('.sidebar__icon').style.display = 'block';
-            }
-        });
-
-        // // Handle submenu toggles
-        // document.querySelectorAll('.nav-link').forEach(link => {
-        //     link.addEventListener('click', function (e) {
-        //         if (window.innerWidth <= 992) {
-        //             const menuText = this.querySelector('.menu-text');
-        //             if (menuText.style.display === 'none') {
-        //                 menuText.style.display = 'inline';
-        //             } else {
-        //                 menuText.style.display = 'none';
-        //                 document.querySelector('.sidebar__logo').style.display = 'none';
-        //                 document.querySelector('.sidebar__icon').style.display = 'block';
-        //             }
-        //         }
-        //     });
-        // });
-    </script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

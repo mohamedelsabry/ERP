@@ -78,4 +78,123 @@ document.addEventListener('DOMContentLoaded', function () {
             sidebar.classList.toggle('show');
         });
     }
+
+    document.getElementById('toggleSidebar').addEventListener('click', function () {
+        const sidebar = document.querySelector('.sidebar');
+        const mainContent = document.querySelector('.main-content');
+
+        if (sidebar.style.width === 'var(--sidebar-collapsed-width)') { // Sidebar is collapsed
+            sidebar.style.width = 'var(--sidebar-width)';
+            sidebar.classList.remove('collapsed');
+
+            mainContent.style.marginRight = 'var(--sidebar-width)';
+            document.querySelectorAll('.menu-text').forEach(el => el.style.display = 'flex');
+            document.querySelector('.sidebar__logo').style.display = 'block'; //logo
+            document.querySelector('.sidebar__icon').style.display = 'none'; //logo icon
+        } else {
+            sidebar.style.width = 'var(--sidebar-collapsed-width)';
+            mainContent.style.marginRight = 'var(--sidebar-collapsed-width)';
+            sidebar.classList.add('collapsed');
+
+            document.querySelectorAll('.menu-text').forEach(el => el.style.display = 'none');
+            document.querySelector('.sidebar__logo').style.display = 'none';
+            document.querySelector('.sidebar__icon').style.display = 'block';
+        }
+    });
+
+
+    const cameraInput = document.getElementById('cameraInput');
+    const previewImage = document.getElementById('previewImage');
+    const cameraContainer = document.getElementById('cameraContainer');
+
+    cameraInput.addEventListener('change', function () {
+        const file = cameraInput.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                previewImage.src = e.target.result;
+                previewImage.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+    // Select all dropdown menus
+    const dropdownMenus = document.querySelectorAll('.input-group .dropdown-menu');
+
+    dropdownMenus.forEach((menu) => {
+        menu.addEventListener('click', (event) => {
+            if (event.target.tagName === 'A') {
+                const selectedCode = event.target.textContent.trim();
+                const button = menu.previousElementSibling; // Find the related button
+                button.textContent = selectedCode;
+            }
+        });
+    });
+    const fileInput = document.getElementById("fileInput");
+    const filePreview = document.querySelector(".file-upload__preview");
+    const uploadBox = document.querySelector(".file-upload");
+
+    // Handle file input change
+    fileInput.addEventListener("change", handleFiles);
+
+    // Drag and drop functionality
+    uploadBox.addEventListener("dragover", (event) => {
+        event.preventDefault();
+        uploadBox.classList.add("dragging");
+    });
+
+    uploadBox.addEventListener("dragleave", () => {
+        uploadBox.classList.remove("dragging");
+    });
+
+    uploadBox.addEventListener("drop", (event) => {
+        event.preventDefault();
+        uploadBox.classList.remove("dragging");
+        const files = event.dataTransfer.files;
+        handleFiles({
+            target: {
+                files
+            }
+        });
+    });
+
+    function handleFiles(event) {
+        const files = event.target.files;
+        Array.from(files).forEach((file) => {
+            if (file.type.startsWith("image/")) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const img = document.createElement("img");
+                    img.src = e.target.result;
+                    filePreview.appendChild(img);
+                };
+                reader.readAsDataURL(file);
+            } else {
+                alert("Please upload an image file.");
+            }
+        });
+    }
+    const closeButtons = document.querySelectorAll(".permission-list__close");
+
+    closeButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+            const item = this.parentElement;
+            item.remove();
+        });
+    });
+
 });
+
+function downloadFile(url) {
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = url.split('/').pop(); // Extracts file name from the URL
+    link.click();
+    console.log(url);
+}
+
+function previewFile(url) {
+    window.open(url, "_blank");
+    console.log(url);
+}

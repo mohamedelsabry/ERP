@@ -36,6 +36,38 @@
                 </ul>
             </li>
             <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle" href="#" id="employeeSettings" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img class="nav-img" src="assets/images/icons/profile-2user.svg" alt="employeeSettings">
+                    <span class="menu-text"> اعدادات الموظفين </span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="employeeSettings">
+                    <li><a class="dropdown-item active" href="marital-status.html">الحالة الاجتماعية </a></li>
+                    <li><a class="dropdown-item " href="#">النوع</a></li>
+                    <li><a class="dropdown-item " href="#">الحالة العسكرية</a></li>
+                    <li><a class="dropdown-item " href="#">نوع العقد</a></li>
+                    <li><a class="dropdown-item " href="#">الديانة</a></li>
+                    <li><a class="dropdown-item " href="#">نوع الدوام</a></li>
+                    <li><a class="dropdown-item " href="#">الصلاحيات</a></li>
+                    <li><a class="dropdown-item " href="#">تامين</a></li>
+                    <li><a class="dropdown-item " href="#">اعدادات المرفقات</a></li>
+                    <li><a class="dropdown-item " href="#">نموذج العقد</a></li>
+                    <li><a class="dropdown-item " href="#">مدة التدريب</a></li>
+                    <li><a class="dropdown-item " href="#">اسباب فسخ العقد</a></li>
+                    <li><a class="dropdown-item " href="#">مجموعة المهام</a></li>
+                    <li><a class="dropdown-item " href="#">اضافة مهام</a></li>
+                    <li><a class="dropdown-item " href="#">التصنيف الوظيفي</a></li>
+                    <li><a class="dropdown-item " href="#">البلاد</a></li>
+                    <li><a class="dropdown-item " href="#">المدن</a></li>
+                    <li><a class="dropdown-item " href="#">المنطقة</a></li>
+                    <li><a class="dropdown-item " href="#">الجنسية</a></li>
+                    <li><a class="dropdown-item " href="#">الجامعات</a></li>
+                    <li><a class="dropdown-item " href="#">تقديرات التخرج</a></li>
+                    <li><a class="dropdown-item " href="#">درجة التخرج</a></li>
+                    <li><a class="dropdown-item " href="#">الفروع</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown ">
                 <a class="nav-link dropdown-toggle " href="#" id="attendance" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     <img class="nav-img" src="assets/images/icons/calendar.svg" alt="attendance">
@@ -149,6 +181,17 @@
 
             <!-- Add more menu items -->
         </nav>
+        <div class="navbar__logo nav-item navbar__logo--sidebar  d-flex align-items-center gap-3">
+            <a href="#" class="nav-link bordered border-3 " id="settings" role="button" aria-expanded="false">
+                <div class="navbar__logo-icon">
+                    <img src="assets/images/icons/chat-icon.svg" alt="chat-icon" width="30" height="30">
+                </div>
+                <div class="navbar__logo-text">
+                    <span class="navbar__logo-title d-block fw-bold text-dark">CodeLab</span>
+                    <span class="navbar__logo-subtitle d-block text-muted">الموارد البشرية</span>
+                </div>
+            </a>
+        </div>
     </div>
 
     <div class="main-content">
@@ -195,8 +238,7 @@
             </div>
         </div>
         <div class="container-fluid">
-            <div
-                class="card bg-white border-0 shadow-sm p-3 justify-content-between d-flex flex-row my-3 align-items-center">
+            <div class="card bg-white border-0 p-3 justify-content-between d-flex flex-row my-3 align-items-center">
                 <div class="card__content ms-4 ">
                     <h5 class="card__title text-dark fw-bold">جميع الموظفين</h5>
                     <p class="card__description text-muted">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء.</p>
@@ -205,346 +247,769 @@
                     <img src="assets/images/icons/business-meeting.svg" alt="business-meeting" class="img-fluid">
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="stats-card">
-                        <div class="stats-card__content">
-                            <div class="stats-card__info">
-                                <h3 class="stats-card__title">الحاليين</h3>
-                                <div class="stats-card__number">12</div>
-
-                            </div>
-                            <div class="stats-card__chart">
-                                <div class="progress-ring">
-                                    <div class="progress-ring__circle progress-ring__circle--orange">
-                                        <span class="progress-ring__percentage">20%</span>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="card bg-white border-0 p-3 justify-content-between d-flex flex-row my-3 align-items-center">
+                <div class="card__image d-flex gap-3">
+                    <img src="assets/images/icons/profile-img.svg" alt="profile-img" class="img-fluid">
+                    <div class="d-flex flex-column justify-content-between">
+                        <h5>اميرة علي</h5>
+                        <div class="d-flex gap-2 align-items-center">
+                            <img src="assets/images/icons/briefcase.svg" alt="briefcase">
+                            <p class="m-0">مديرة المشاريع</p>
                         </div>
-                        <div class="stats-card__details">
-                            <span class="stats-card__growth stats-card__growth--positive"><strong>20%</strong>
-                                زيادة</span>
-                            <span class="stats-card__period">الشهر الماضي</span>
+                        <div class="d-flex gap-2 align-items-center">
+                            <img src="assets/images/icons/gmail.svg" alt="gmail">
+                            <p class="m-0">CodeLab@example.com </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="stats-card">
-                        <div class="stats-card__content">
-                            <div class="stats-card__info">
-                                <h3 class="stats-card__title">الحاليين</h3>
-                                <div class="stats-card__number">12</div>
-
-                            </div>
-                            <div class="stats-card__chart">
-                                <div class="progress-ring">
-                                    <div class="progress-ring__circle progress-ring__circle--orange">
-                                        <span class="progress-ring__percentage">20%</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="stats-card__details">
-                            <span class="stats-card__growth stats-card__growth--positive"><strong>20%</strong>
-                                زيادة</span>
-                            <span class="stats-card__period">الشهر الماضي</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="stats-card">
-                        <div class="stats-card__content">
-                            <div class="stats-card__info">
-                                <h3 class="stats-card__title">الحاليين</h3>
-                                <div class="stats-card__number">12</div>
-
-                            </div>
-                            <div class="stats-card__chart">
-                                <div class="progress-ring">
-                                    <div class="progress-ring__circle progress-ring__circle--orange">
-                                        <span class="progress-ring__percentage">20%</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="stats-card__details">
-                            <span class="stats-card__growth stats-card__growth--positive"><strong>20%</strong>
-                                زيادة</span>
-                            <span class="stats-card__period">الشهر الماضي</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="stats-card">
-                        <div class="stats-card__content">
-                            <div class="stats-card__info">
-                                <h3 class="stats-card__title">الحاليين</h3>
-                                <div class="stats-card__number">12</div>
-
-                            </div>
-                            <div class="stats-card__chart">
-                                <div class="progress-ring">
-                                    <div class="progress-ring__circle progress-ring__circle--orange">
-                                        <span class="progress-ring__percentage">20%</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="stats-card__details">
-                            <span class="stats-card__growth stats-card__growth--positive"><strong>20%</strong>
-                                زيادة</span>
-                            <span class="stats-card__period">الشهر الماضي</span>
-                        </div>
-                    </div>
+                <div class="card__content ms-4 ">
+                    <button class="btn btn-primary">
+                        <img src="assets/images/icons/edit.svg" alt="edit">
+                        تعديل الملف الشخصي
+                    </button>
                 </div>
 
             </div>
+            <div class="card bg-white my-3 border-0">
+                <ul class="nav nav-pills tabs" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-profile-data-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-profile-data" type="button" role="tab"
+                            aria-controls="pills-profile-data" aria-selected="true">البيانات الشخصية</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-profile-education-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-profile-education" type="button" role="tab"
+                            aria-controls="pills-profile-education" aria-selected="false">البيانات الوظيفية
+                            والتعليم</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-profile-files-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-profile-files" type="button" role="tab"
+                            aria-controls="pills-profile-files" aria-selected="false">الملفات واللوائح</button>
+                    </li>
+                </ul>
+            </div>
 
-            <div class="dashboard">
-                <div class="container py-4">
-                    <!-- Header Actions -->
-                    <div class="dashboard__actions mb-4 d-flex justify-content-between align-items-center">
-                        <div class="dashboard__search">
-                            <input type="search" class="form-control" placeholder="البحث">
+
+
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-profile-data" role="tabpanel"
+                    aria-labelledby="pills-profile-data-tab">
+
+                    <section class="form-section ">
+                        <div class="card bg-white p-3 my-3 border-0">
+                            <div class="container">
+                                <form>
+                                    <div class="row gy-3">
+                                        <!-- Camera and Image Section -->
+                                        <div class="col-12 d-flex ">
+                                            <div class="form-section__camera" id="cameraContainer">
+                                                <span class="form-section__camera-icon">
+                                                    <img src="assets/images/icons/camera.svg" alt="camera">
+                                                </span>
+                                                <input type="file" id="cameraInput" accept="image/*" />
+                                                <img id="previewImage" alt="Uploaded Image" />
+                                            </div>
+                                        </div>
+                                        <!-- Code -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="code" class="form-label">الكود</label>
+                                            <input type="text" class="form-control" id="code"
+                                                placeholder="ادخل الكود" />
+                                        </div>
+                                        <!-- Arabic Name -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="arabicName" class="form-label">الاسم باللغة
+                                                العربية</label>
+                                            <input type="text" class="form-control" id="arabicName"
+                                                placeholder="اكتب الاسم" />
+                                        </div>
+                                        <!-- English Name -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="englishName" class="form-label">الاسم باللغة
+                                                الانجليزية</label>
+                                            <input type="text" class="form-control" id="englishName"
+                                                placeholder="Enter name" />
+                                        </div>
+                                        <!-- Country -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="country" class="form-label">البلد</label>
+                                            <select class="form-select" id="country">
+                                                <option selected>اختر الدولة</option>
+                                                <option value="1">السعودية</option>
+                                                <option value="2">مصر</option>
+                                                <option value="3">اليمن</option>
+                                            </select>
+                                        </div>
+                                        <!-- City -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="city" class="form-label">المدينة</label>
+                                            <select class="form-select" id="city">
+                                                <option selected>اختر المدينة</option>
+                                            </select>
+                                        </div>
+                                        <!-- Region -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="region" class="form-label">المنطقة</label>
+                                            <select class="form-select" id="region">
+                                                <option selected>حدد المنطقة</option>
+                                            </select>
+                                        </div>
+                                        <!-- Address -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="address" class="form-label">العنوان</label>
+                                            <input type="text" class="form-control" id="address"
+                                                placeholder="اختر الدولة" />
+                                        </div>
+                                        <!-- Region -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="address2" class="form-label">المنطقة</label>
+                                            <input type="text" class="form-control" id="address2"
+                                                placeholder="حدد المنطقة" />
+                                        </div>
+                                        <!-- Phone Number -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="phoneNumber" class="form-label">رقم الهاتف</label>
+                                            <div class="input-group">
+                                                <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">+966</button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">+966</a></li>
+                                                    <li><a class="dropdown-item" href="#">+20</a></li>
+                                                    <li><a class="dropdown-item" href="#">+967</a></li>
+                                                </ul>
+                                                <input type="text" class="form-control" id="phoneNumber"
+                                                    placeholder="ادخل رقم الهاتف" />
+                                            </div>
+                                        </div>
+
+                                        <!-- Phone Number -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="phoneNumber" class="form-label">رقم هاتف العمل</label>
+                                            <div class="input-group">
+                                                <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">+966</button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">+966</a></li>
+                                                    <li><a class="dropdown-item" href="#">+20</a></li>
+                                                    <li><a class="dropdown-item" href="#">+967</a></li>
+                                                </ul>
+                                                <input type="text" class="form-control" id="phoneNumber"
+                                                    placeholder="ادخل رقم الهاتف" />
+                                            </div>
+                                        </div>
+                                        <!-- Phone Number -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="phoneNumber2" class="form-label">الموبايل</label>
+                                            <div class="input-group">
+                                                <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">+966</button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">+966</a></li>
+                                                    <li><a class="dropdown-item" href="#">+20</a></li>
+                                                    <li><a class="dropdown-item" href="#">+967</a></li>
+                                                </ul>
+                                                <input type="text" class="form-control" id="phoneNumber2"
+                                                    placeholder="ادخل رقم الهاتف" />
+                                            </div>
+                                        </div>
+
+                                        <!-- birtPlace -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="birtPlace" class="form-label">مكان الميلاد</label>
+                                            <input type="text" class="form-control" id="phoneNumber2"
+                                                placeholder="مكان الميلاد  " />
+                                        </div>
+
+
+                                        <!-- Birth Date -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="birthDate" class="form-label">تاريخ الميلاد</label>
+                                            <input type="date" class="form-control" id="birthDate" />
+                                        </div>
+
+                                        <!-- Gender -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="gender" class="form-label">حدد الجنس</label>
+                                            <select class="form-select" id="gender">
+                                                <option selected>اختر النوع</option>
+                                                <option value="male">ذكر</option>
+                                                <option value="female">أنثى</option>
+                                            </select>
+                                        </div>
+                                        <!-- Religion -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="religion" class="form-label">الديانة</label>
+                                            <select class="form-select" id="religion">
+                                                <option selected>اختر الديانة</option>
+                                                <option value="male">مسلم</option>
+                                                <option value="female">مسيحي</option>
+                                            </select>
+                                        </div>
+
+                                        <!-- Military Status -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="militaryStatus" class="form-label">الحالة
+                                                العسكرية</label>
+                                            <select class="form-select" id="militaryStatus">
+                                                <option selected>اختر الحالة</option>
+                                                <option value="completed">مكتمل</option>
+                                                <option value="exempt">معفى</option>
+                                                <option value="postponed">مؤجل</option>
+                                            </select>
+                                        </div>
+                                        <!-- Military Service End Date -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="militaryEndDate" class="form-label">تاريخ انتهاء شهادة
+                                                الخدمة
+                                                العسكرية</label>
+                                            <input type="date" class="form-control" id="militaryEndDate" />
+                                        </div>
+                                        <!-- marital status -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="maritalStatus" class="form-label">الحالة
+                                                الاجتماعية</label>
+                                            <select class="form-select" id="maritalStatus">
+                                                <option selected>اختر الحالة</option>
+                                                <option value="bachelor">اعزب</option>
+                                                <option value="married">متزوج</option>
+                                            </select>
+                                        </div>
+
+
+                                        <!-- Nationality -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="nationality" class="form-label">الجنسية</label>
+                                            <select class="form-select" id="nationality">
+                                                <option selected>اختر الجنسية</option>
+                                                <option value="saudi">سعودي</option>
+                                                <option value="egyptian">مصري</option>
+                                                <option value="yemeni">يمني</option>
+                                            </select>
+                                        </div>
+                                        <!-- National ID -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="nationalId" class="form-label">الرقم القومي</label>
+                                            <input type="text" class="form-control" id="nationalId"
+                                                placeholder="اكتب الرقم القومي" />
+                                        </div>
+                                        <!-- National ID location -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="nationalIdLocation" class="form-label">مكان الاصدار
+                                            </label>
+                                            <input type="text" class="form-control" id="nationalIdLocation"
+                                                placeholder="اكتب الرقم القومي" />
+                                        </div>
+                                        <!-- ID Card Expiry Date -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="idCardExpiryDate" class="form-label">تاريخ انتهاء
+                                                البطاقة
+                                                الشخصية</label>
+                                            <input type="date" class="form-control" id="idCardExpiryDate" />
+                                        </div>
+
+                                        <!-- Passport Number -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="passportNumber" class="form-label">رقم جواز
+                                                السفر</label>
+                                            <input type="text" class="form-control" id="passportNumber"
+                                                placeholder="اختر النوع" />
+                                        </div>
+                                        <!-- Passport Card Expiry Date -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="passportCardExpiryDate" class="form-label">
+                                                تاريخ انتهاء جواز ااسفر
+                                            </label>
+                                            <input type="date" class="form-control" id="passportCardExpiryDate" />
+                                        </div>
+
+
+
+                                        <!-- Contract Start Date -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="contractStartDate" class="form-label">تاريخ بداية
+                                                العقد</label>
+                                            <input type="date" class="form-control" id="contractStartDate" />
+                                        </div>
+                                        <!-- Contract End Date -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="contractEndDate" class="form-label">تاريخ انتهاء
+                                                العقد</label>
+                                            <input type="date" class="form-control" id="contractEndDate" />
+                                        </div>
+
+
+                                        <!-- Email -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="email" class="form-label">البريد الالكتروني</label>
+                                            <input type="text" class="form-control" id="email"
+                                                placeholder="اكتب الدرجة الوظيفية" />
+                                        </div>
+                                        <!-- Company -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="company" class="form-label">الشركة</label>
+                                            <input type="text" class="form-control" id="company"
+                                                placeholder="اكتب اسم الشركة" />
+                                        </div>
+                                        <!-- Job Level -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="jobLevel" class="form-label">درجة المستوى
+                                                الوظيفي</label>
+                                            <input type="text" class="form-control" id="jobLevel"
+                                                placeholder="اكتب الدرجة الوظيفية" />
+                                        </div>
+                                        <!-- Description -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="description" class="form-label">التوصيف</label>
+                                            <input type="text" class="form-control" id="description"
+                                                placeholder="اكتب الدرجة الوظيفية" />
+                                        </div>
+
+                                        <!-- Driving License Number -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="drivingLicenseNumber" class="form-label">رقم رخصة
+                                                القيادة</label>
+                                            <input type="text" class="form-control" id="drivingLicenseNumber"
+                                                placeholder="اكتب الرقم" />
+                                        </div>
+
+                                        <!-- Syndicate card number -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="syndicateCardNumber" class="form-label">
+                                                رقم كارنيه النقابة
+                                            </label>
+                                            <input type="text" class="form-control" id="syndicateCardNumber"
+                                                placeholder="اكتب الرقم" />
+                                        </div>
+                                        <!-- Syndicate card end Date -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="syndicateCardEndDate" class="form-label">تاريخ انتهاء
+                                                كارنيه
+                                                النقابه</label>
+                                            <input type="date" class="form-control" id="syndicateCardEndDate" />
+                                        </div>
+                                        <!-- Work Permit Book -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="workPermitBook" class="form-label"> تصريح العمل</label>
+                                            <input type="text" class="form-control" id="workPermitBook"
+                                                placeholder="اكتب تصريح العمل" />
+                                        </div>
+                                        <!-- License Number -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="licenseNumber" class="form-label">رقم الترخيص</label>
+                                            <input type="text" class="form-control" id="licenseNumber"
+                                                placeholder="اكتب الرقم" />
+                                        </div>
+
+                                        <!-- Blood type -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="bloodType" class="form-label">فصيلة الدم </label>
+                                            <input type="text" class="form-control" id="bloodType"
+                                                placeholder="فصيلة الدم " />
+                                        </div>
+
+                                        <!-- work position -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="work-position" class="form-label">مكان العمل</label>
+                                            <input type="text" class="form-control" id="work-position"
+                                                placeholder="اذكر من القائمة" />
+                                        </div>
+                                        <!-- Expiration Date -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="expirationDate" class="form-label">
+                                                تاريخ انتهاء الصلاحية
+                                            </label>
+                                            <input type="date" class="form-control" id="expirationDate" />
+                                        </div>
+
+                                        <!-- Project -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="project" class="form-label">المشروع </label>
+
+                                            <select class="form-select" id="project">
+                                                <option selected>اذكر من القائمة</option>
+                                                <option value="bachelor">مشروع1</option>
+                                                <option value="married">مشروع2</option>
+                                            </select>
+                                        </div>
+
+                                        <!-- Manager -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="manager" class="form-label">المدير</label>
+
+                                            <select class="form-select" id="manager">
+                                                <option selected>اذكر من القائمة</option>
+                                                <option value="bachelor">مشروع1</option>
+                                                <option value="married">مشروع2</option>
+                                            </select>
+                                        </div>
+                                        <!-- Branch -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="branch" class="form-label">الفرع</label>
+
+                                            <select class="form-select" id="branch">
+                                                <option selected>اذكر من القائمة</option>
+                                                <option value="bachelor">مشروع1</option>
+                                                <option value="married">مشروع2</option>
+                                            </select>
+                                        </div>
+
+
+
+
+                                    </div>
+
+                                </form>
+                            </div>
                         </div>
-                        <div class="d-flex gap-3">
-                            <button class="btn btn-light dashboard__export-btn">
-                                <span class="me-2"><img src="assets/images/icons/import.svg" alt="import"></span>
-                                تصدير
-                            </button>
-                            <button class="btn btn-primary dashboard__add-btn">
-                                <span class="me-2"><img src="assets/images/icons/add-circle.svg" alt="add"></span>
-                                إضافة موظف جديد
-                            </button>
+                    </section>
+                    <section class="form-section ">
+                        <div class="card bg-white p-3 my-3 border-0">
+                            <h5 class="text-primary fs-6 my-3">بيانات المستخدم</h5>
+                            <form action="">
+                                <div class="row">
+                                    <!-- English Name -->
+                                    <div class="col-md-4 my-2">
+                                        <label for="userName" class="form-label">اسم المستخدم  </label>
+                                        <input type="text" class="form-control" id="userName"
+                                            placeholder="اسم المستخدم " />
+                                    </div>
+                                    <!-- English Name -->
+                                    <div class="col-md-4 my-2">
+                                        <label for="password" class="form-label">كلمة السر </label>
+                                        <input type="password" class="form-control" id="password"
+                                            placeholder="كلمة السر" />
+                                    </div>
+                                    <!-- Country -->
+                                    <div class="col-md-4 my-2">
+                                        <label for="permisions" class="form-label">الصلاحيات</label>
+                                        <select class="form-select" id="permisions">
+                                            <option selected>حدد الصلاحية </option>
+                                            <option value="1">مدير</option>
+                                            <option value="3">مسؤل توظيف</option>
+                                        </select>
+                                    </div>
+                                    <!-- Country -->
+                                    <div class="col-md-12 my-2">
+                                        <label for="permisionsMenu" class="form-label">قائمة الصلاحيات</label>
+                                        <select class="form-select" id="permisionsMenu">
+                                            <option selected>حدد الصلاحية </option>
+                                            <option value="1">مدير</option>
+                                            <option value="3">مسؤل توظيف</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-12 my-2">
+                                        <!-- <label for="permisionsMenu" class="form-label">قائمة الصلاحيات</label> -->
+                                        <div class="permission-list">
+                                            <div class="permission-list__header">قائمة الصلاحيات</div>
+                                            <div class="permission-list__items">
+                                                <div class="permission-list__item">
+                                                    <button class="permission-list__close"
+                                                        aria-label="Remove">&times;</button>
+                                                    <span>تعديل</span>
+                                                </div>
+                                                <div class="permission-list__item">
+                                                    <button class="permission-list__close"
+                                                        aria-label="Remove">&times;</button>
+                                                    <span>الإضافة</span>
+                                                </div>
+                                                <div class="permission-list__item">
+                                                    <button class="permission-list__close"
+                                                        aria-label="Remove">&times;</button>
+                                                    <span>حذف الموظفين</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 my-2 d-flex justify-content-end mt-3">
+                                        <button class="btn btn-outline-secondary mx-3">الغاء</button>
+                                        <button class="btn btn-primary">التالي</button>
+
+                                    </div>
+                                </div>
+                            </form>
                         </div>
+                    </section>
+                </div>
 
-                    </div>
 
-                    <!-- Table -->
-                    <div class="table-responsive">
-                        <table class="table employee-table">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        <input type="checkbox" class="form-check-input">
-                                    </th>
-                                    <th>#</th>
-                                    <th>اسم الموظف</th>
-                                    <th>البريد الإلكتروني</th>
-                                    <th>الدور الوظيفي</th>
-                                    <th>الوحدة</th>
-                                    <th>القسم</th>
-                                    <th>الحالة</th>
-                                    <th>
-                                        <img class="employee-table__icon img-fluid"
-                                            src="assets/images/icons/grid-edit.svg" alt="grid-edit">
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><input type="checkbox" class="form-check-input"></td>
-                                    <td>1</td>
-                                    <td>
-                                        <div class="employee-info">
-                                            <img src="assets/images/avatar.svg" class="employee-info__avatar" alt="">
 
-                                            <span> علي</span>
+                <div class="tab-pane fade" id="pills-profile-education" role="tabpanel"
+                    aria-labelledby="pills-profile-education-tab">
+                    <section class="form-section ">
+                        <div class="card bg-white p-3 my-3 border-0">
+                            <div class="container">
+                                <form>
+                                    <h5 class="text-primary fs-6 my-3">بيانات المستخدم</h5>
+                                    <div class="row gy-3">
+                                        <!-- Job Name -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="jobName" class="form-label">الوظيفة </label>
+                                            <div class="d-flex">
+                                                <select class="form-select w-75" id="jobName">
+                                                    <option selected>اختر من القائمة </option>
+                                                    <option value="1">مدير</option>
+                                                    <option value="3">مسؤل توظيف</option>
+                                                </select>
+                                                <button class="btn btn-outline-primary w-50 px-2 mx-3">اضافة
+                                                    جديد</button>
+                                            </div>
                                         </div>
-                                    </td>
-                                    <td>Codelab@gmail.com</td>
-                                    <td>الشؤون الإدارية</td>
-                                    <td>إدارة الشؤون الإدارية</td>
-                                    <td>الإدارة العليا</td>
-                                    <td><span class="badge status-badge status-badge--active">نشط</span></td>
-                                    <td>
-                                        <!-- <button class="btn btn-link">⋮</button> -->
-                                        <div class="btn-group">
-                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button"
-                                                id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true"
-                                                aria-expanded="false">
-                                                ⋮
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
-                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
-                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
-                                            </ul>
+                                        <div class="col-md-4 my-2">
+                                            <label for="departmentManagers" class="form-label">مديرين القسم </label>
+                                            <select class="form-select" id="departmentManagers">
+                                                <option selected>اختر من القائمة </option>
+                                                <option value="1">مدير</option>
+                                                <option value="3">مسؤل توظيف</option>
+                                            </select>
                                         </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" class="form-check-input"></td>
-                                    <td>1</td>
-                                    <td>
-                                        <div class="employee-info">
-                                            <img src="assets/images/avatar.svg" class="employee-info__avatar" alt="">
+                                        <div class="col-md-4 my-2">
+                                            <label for="unitManagers" class="form-label">مديرين الوحدة </label>
+                                            <select class="form-select" id="unitManagers">
+                                                <option selected>اختر من القائمة </option>
+                                                <option value="1">مدير</option>
+                                                <option value="3">مسؤل توظيف</option>
+                                            </select>
+                                        </div>
 
-                                            <span> علي</span>
+                                        <!-- appointment Date -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="appointmentDate" class="form-label"> تاريخ التعيين</label>
+                                            <input type="date" class="form-control" id="appointmentDate" />
                                         </div>
-                                    </td>
-                                    <td>Codelab@gmail.com</td>
-                                    <td>الشؤون الإدارية</td>
-                                    <td>إدارة الشؤون الإدارية</td>
-                                    <td>الإدارة العليا</td>
-                                    <td><span class="badge status-badge status-badge--inactive">محظور</span></td>
-                                    <td>
-                                        <!-- <button class="btn btn-link">⋮</button> -->
-                                        <div class="btn-group">
-                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button"
-                                                id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true"
-                                                aria-expanded="false">
-                                                ⋮
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
-                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
-                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
-                                            </ul>
+                                        <!-- appointment Date -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="appointmentDate" class="form-label"> تاريخ التعيين</label>
+                                            <input type="date" class="form-control" id="appointmentDate" />
                                         </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" class="form-check-input"></td>
-                                    <td>1</td>
-                                    <td>
-                                        <div class="employee-info">
-                                            <img src="assets/images/avatar.svg" class="employee-info__avatar" alt="">
+                                        <!-- appointment Date -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="appointmentDate" class="form-label"> تاريخ التعيين</label>
+                                            <input type="date" class="form-control" id="appointmentDate" />
+                                        </div>
 
-                                            <span> علي</span>
-                                        </div>
-                                    </td>
-                                    <td>Codelab@gmail.com</td>
-                                    <td>الشؤون الإدارية</td>
-                                    <td>إدارة الشؤون الإدارية</td>
-                                    <td>الإدارة العليا</td>
-                                    <td><span class="badge status-badge status-badge--pending">موقوف</span></td>
-                                    <td>
-                                        <!-- <button class="btn btn-link">⋮</button> -->
-                                        <div class="btn-group">
-                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button"
-                                                id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true"
-                                                aria-expanded="false">
-                                                ⋮
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
-                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
-                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <!-- Repeat similar rows for other employees -->
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <!-- Pagination -->
-                    <div class="d-flex justify-content-between align-items-center mt-4">
-                        <div class="pagination-info">
-                            عرض 1 من 10 النتائج 66
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                        <nav>
-                            <ul class="pagination">
-                                <li class="page-item"><a class="page-link" href="#">&lt;</a></li>
-                                <li class="page-item"><a class="page-link" href="#">10</a></li>
-                                <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">&gt;</a></li>
-                            </ul>
-                        </nav>
-                    </div>
+                    </section>
+                    <section class="form-section ">
+                        <div class="card bg-white p-3 my-3 border-0">
+                            <div class="container">
+                                <form>
+                                    <h5 class="text-primary fs-6 my-3">بيانات التعليم</h5>
+                                    <div class="row gy-3">
+                                        <!-- Job Name -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="jobName" class="form-label">الوظيفة </label>
+                                            <select class="form-select" id="jobName">
+                                                <option selected>اختر من القائمة </option>
+                                                <option value="1">مدير</option>
+                                                <option value="3">مسؤل توظيف</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 my-2">
+                                            <label for="departmentManagers" class="form-label">مديرين القسم </label>
+                                            <select class="form-select" id="departmentManagers">
+                                                <option selected>اختر من القائمة </option>
+                                                <option value="1">مدير</option>
+                                                <option value="3">مسؤل توظيف</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 my-2">
+                                            <label for="unitManagers" class="form-label">مديرين الوحدة </label>
+                                            <select class="form-select" id="unitManagers">
+                                                <option selected>اختر من القائمة </option>
+                                                <option value="1">مدير</option>
+                                                <option value="3">مسؤل توظيف</option>
+                                            </select>
+                                        </div>
+
+                                        <!-- appointment Date -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="appointmentDate" class="form-label"> تاريخ التعيين</label>
+                                            <input type="date" class="form-control" id="appointmentDate" />
+                                        </div>
+                                        <!-- appointment Date -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="appointmentDate" class="form-label"> تاريخ التعيين</label>
+                                            <input type="date" class="form-control" id="appointmentDate" />
+                                        </div>
+                                        <!-- appointment Date -->
+                                        <div class="col-md-4 my-2">
+                                            <label for="appointmentDate" class="form-label"> تاريخ التعيين</label>
+                                            <input type="date" class="form-control" id="appointmentDate" />
+                                        </div>
+                                        <div class="col-md-12 my-2">
+                                            <div class="file-upload">
+                                                <div class="file-upload__container">
+                                                    <label for="fileInput" class="file-upload__label">
+                                                        <div class="file-upload__icon">
+                                                            <img src="assets/images/icons/upload.svg" alt="apload img">
+                                                        </div>
+                                                        <div class="file-upload__text">
+                                                            قم بسحب ملف وإفلاته أو قم بتحميل ملف جديد
+                                                        </div>
+                                                        <div class="file-upload__support">
+                                                            الصيغ المدعومة: PNG, JPG
+                                                        </div>
+                                                    </label>
+                                                    <input type="file" id="fileInput" class="file-upload__input"
+                                                        accept="image/png, image/jpeg">
+                                                    <div class="file-upload__preview">
+                                                        <!-- Preview of uploaded files will appear here -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 my-2">
+                                            <div class="file-preview">
+                                                <div class="file-preview__header">التوقيع</div>
+                                                <div class="file-preview__content">
+                                                    <img src="assets/images/icons/pdf-icon.svg" alt="PDF Icon"
+                                                        class="file-preview__icon" />
+                                                    <span class="file-preview__name">الملف الخاص بالتوقيع.pdf</span>
+                                                    <div class="file-preview__actions">
+                                                        <button class="file-preview__action"
+                                                            onclick="previewFile('assets/images/avatar.svg')"
+                                                            aria-label="Preview">
+                                                            <img src="assets/images/icons/preview-icon.svg"
+                                                                alt="preview-icon">
+                                                        </button>
+                                                        <button class="file-preview__action"
+                                                            onclick="downloadFile('assets/images/avatar.svg')"
+                                                            aria-label="Download">
+                                                            <img src="assets/images/icons/download-icon.svg"
+                                                                alt="download-icon">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 my-2 d-flex justify-content-end mt-3">
+                                            <button class="btn btn-outline-secondary mx-3">الغاء</button>
+                                            <button class="btn btn-primary">التالي</button>
+
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+                <div class="tab-pane fade" id="pills-profile-files" role="tabpanel"
+                    aria-labelledby="pills-profile-files-tab">
+
+                    <section class="form-section ">
+                        <div class="card bg-white p-3 my-3 border-0">
+                            <div class="container">
+                                <form>
+                                    <h5 class="text-primary fs-6 my-3">اللوائح </h5>
+                                    <div class="row gy-3">
+                                        <div class="col-md-4 my-2">
+                                            <label for="files" class="form-label"> الاسم </label>
+                                            <div class="d-flex">
+                                                <input type="number" class="form-control" id="files"
+                                                    placeholder="العدد" />
+                                                <button class="btn btn-gray ms-2">
+                                                    <img src="assets/images/icons/setting.svg" alt="setting">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 my-2">
+                                            <label for="addFile" class="form-label"> تحميل ملف </label>
+                                            <div class="d-flex">
+                                                <input type="number" class="form-control" id="addFile"
+                                                    placeholder="القيمة" />
+                                                <button class="btn btn-gray ms-2">
+                                                    <img src="assets/images/icons/setting.svg" alt="setting">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="form-section ">
+                        <div class="card bg-white p-3 my-3 border-0">
+                            <div class="container">
+                                <form>
+                                    <h5 class="text-primary fs-6 my-3">الملفات </h5>
+                                    <div class="row gy-3">
+                                        <div class="col-md-4 my-2">
+                                            <label for="attendanceRegulations" class="form-label">لوائح الحضور </label>
+                                            <select class="form-select" id="attendanceRegulations">
+                                                <option selected>اختر من القائمة </option>
+                                                <option value="1">مدير</option>
+                                                <option value="3">مسؤل توظيف</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 my-2">
+                                            <label for="attendanceRegulations" class="form-label">لوائح الحضور </label>
+                                            <select class="form-select" id="attendanceRegulations">
+                                                <option selected>اختر من القائمة </option>
+                                                <option value="1">مدير</option>
+                                                <option value="3">مسؤل توظيف</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 my-2">
+                                            <label for="attendanceRegulations" class="form-label">لوائح الحضور </label>
+                                            <select class="form-select" id="attendanceRegulations">
+                                                <option selected>اختر من القائمة </option>
+                                                <option value="1">مدير</option>
+                                                <option value="3">مسؤل توظيف</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-12 my-2">
+                                            <h5 class="text-primary fs-6 my-3">اجازة غير مدفوعة الاجر </h5>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckCheckedDisabled">
+                                                <label class="form-check-label" for="flexCheckCheckedDisabled">
+                                                    منح اجازة غير مدفوعة الاجر
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 my-2">
+                                            <label for="attendanceRegulations" class="form-label">نوع الاجازة </label>
+                                            <select class="form-select" id="attendanceRegulations">
+                                                <option selected>اختر من القائمة </option>
+                                                <option value="1">مدير</option>
+                                                <option value="3">مسؤل توظيف</option>
+                                            </select>
+                                        </div>
+                                        <!-- appointment Date -->
+                                        <div class="col-md-6 my-2">
+                                            <label for="appointmentDate" class="form-label"> تاريخ الاجازة </label>
+                                            <input type="date" class="form-control" id="appointmentDate" />
+                                        </div>
+                                        <div class="col-md-12 my-2 d-flex justify-content-end mt-3">
+                                            <button class="btn btn-outline-secondary mx-3">الغاء</button>
+                                            <button class="btn btn-primary">التالي</button>
+
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
+
+
 
         </div>
+
+    </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/main.js"></script>
     <script>
-        const ctx = document.getElementById('myChart').getContext('2d');
-        const myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو'],
-                datasets: [{
-                    label: 'إحصائيات الشهر الماضي',
-                    data: [12, 19, 3, 5, 2, 3],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-    </script>
 
-
-    <script>
-        document.getElementById('toggleSidebar').addEventListener('click', function () {
-            const sidebar = document.querySelector('.sidebar');
-            const mainContent = document.querySelector('.main-content');
-
-            if (sidebar.style.width === 'var(--sidebar-collapsed-width)') { // Sidebar is collapsed
-                sidebar.style.width = 'var(--sidebar-width)';
-                sidebar.classList.remove('collapsed');
-
-                mainContent.style.marginRight = 'var(--sidebar-width)';
-                document.querySelectorAll('.menu-text').forEach(el => el.style.display = 'flex');
-                document.querySelector('.sidebar__logo').style.display = 'block'; //logo
-                document.querySelector('.sidebar__icon').style.display = 'none'; //logo icon
-            } else {
-                sidebar.style.width = 'var(--sidebar-collapsed-width)';
-                mainContent.style.marginRight = 'var(--sidebar-collapsed-width)';
-                sidebar.classList.add('collapsed');
-
-                document.querySelectorAll('.menu-text').forEach(el => el.style.display = 'none');
-                document.querySelector('.sidebar__logo').style.display = 'none';
-                document.querySelector('.sidebar__icon').style.display = 'block';
-            }
-        });
-
-        // // Handle submenu toggles
-        // document.querySelectorAll('.nav-link').forEach(link => {
-        //     link.addEventListener('click', function (e) {
-        //         if (window.innerWidth <= 992) {
-        //             const menuText = this.querySelector('.menu-text');
-        //             if (menuText.style.display === 'none') {
-        //                 menuText.style.display = 'inline';
-        //             } else {
-        //                 menuText.style.display = 'none';
-        //                 document.querySelector('.sidebar__logo').style.display = 'none';
-        //                 document.querySelector('.sidebar__icon').style.display = 'block';
-        //             }
-        //         }
-        //     });
-        // });
     </script>
 </body>
 
