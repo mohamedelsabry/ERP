@@ -558,6 +558,11 @@ body {
     color: #D92D20;
 }
 
+.status-badge--info {
+    background-color: #F0F9FF;
+    color: #0086C9;
+}
+
 .status-badge--pending {
     background-color: var(--gray-100);
     color: var(--gray-600);
@@ -901,6 +906,49 @@ input[type="date"i]::-webkit-calendar-picker-indicator {
     gap: 10px;
     height: 100%;
     justify-content: flex-end;
+}
+
+/* attendence page  */
+.card__requests {
+    display: flex;
+    justify-content: space-around;
+    padding-block: 10px;
+    margin-bottom: 16px;
+    align-items: center;
+    background-color: var(--gray-25);
+    border: 1px solid var(--brand-color-50);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.card__requests-content {
+    h6 {
+        font-size: 0.875rem;
+        color: #0A1B39;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 0.75rem;
+        color: #83899F;
+        margin: 0;
+    }
+
+}
+
+.card__requests-icon {
+    width: 46px;
+    height: 46px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.card-borded-dashed {
+    border-style: dashed;
 }
 
 @media (max-width: 992px) {

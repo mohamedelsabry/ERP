@@ -69,12 +69,14 @@
             </li>
             <li class="nav-item dropdown ">
                 <a class="nav-link dropdown-toggle " href="#" id="attendance" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
+                    aria-expanded="true">
                     <img class="nav-img" src="assets/images/icons/calendar.svg" alt="attendance">
                     <span class="menu-text"> الحضور والانصراف </span>
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="attendance">
-                    <li><a class="dropdown-item" href="#">جميع الموظفيين</a></li>
+                <ul class="dropdown-menu show" aria-labelledby="attendance">
+                    <li><a class="dropdown-item" href="#">الاحصائيات </a></li>
+                    <li><a class="dropdown-item active" href="#">حضور وانصراف الموظف </a></li>
+                    <li><a class="dropdown-item" href="#">النص الاساسي </a></li>
                     <li><a class="dropdown-item " href="#">الاعدادات</a></li>
                 </ul>
             </li>
@@ -202,7 +204,8 @@
                     <span class="navbar__title-main d-block fw-bold text-dark">الموظفين</span>
                     <div class="navbar__title-sub-container">
                         <a href="#" class="navbar__title-sub ">لوحة التحكم </a>
-                        <span class="navbar__title-sub  "> الموظفين </span>
+                        <a href="#" class="navbar__title-sub ">الحضور والانصراف </a>
+                        <span class="navbar__title-sub  "> حضور وانصراف الموظف </span>
                     </div>
                 </div>
                 <div class="navbar__actions d-flex align-items-center gap-2">
@@ -240,131 +243,74 @@
         <div class="container-fluid">
             <div class="card bg-white border-0 p-3 justify-content-between d-flex flex-row my-3 align-items-center">
                 <div class="card__content ms-4 ">
-                    <h5 class="card__title text-dark fw-bold">جميع الموظفين</h5>
+                    <h5 class="card__title text-dark fw-bold">حضور وانصراف الموظف </h5>
                     <p class="card__description text-muted">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء.</p>
                 </div>
                 <div class="card__image">
-                    <img src="assets/images/icons/business-meeting.svg" alt="business-meeting" class="img-fluid">
+                    <img src="assets/images/icons/business-meeting2.svg" alt="business-meeting" class="img-fluid">
+                </div>
+            </div>
+            <div class="card bg-white border-0 p-3 ">
+                <div class="card__content ms-4 ">
+                    <h5 class="card__title text-dark fw-bold">تقديم الطلبات </h5>
+                    <p class="card__description text-muted">اختر نوع الاجازة التي تريد ان تعطيها للموظف . </p>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5">
+                    <div class="col">
+                        <a href="#" class="card__requests">
+                            <img class="card__requests-icon" src="assets/images/icons/3dcube.svg" alt="icon">
+                            <div class="card__requests-content">
+                                <h6>طلب مامورية</h6>
+                                <p>بامكانك المتابعة </p>
+                            </div>
+                            <img class="card__requests-arrow" src="assets/images/icons/Down.svg" alt="arrow">
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#" class="card__requests">
+                            <img class="card__requests-icon" src="assets/images/icons/3dcube.svg" alt="icon">
+                            <div class="card__requests-content">
+                                <h6>طلب مامورية</h6>
+                                <p>بامكانك المتابعة </p>
+                            </div>
+                            <img class="card__requests-arrow" src="assets/images/icons/Down.svg" alt="arrow">
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#" class="card__requests">
+                            <img class="card__requests-icon" src="assets/images/icons/3dcube.svg" alt="icon">
+                            <div class="card__requests-content">
+                                <h6>طلب مامورية</h6>
+                                <p>بامكانك المتابعة </p>
+                            </div>
+                            <img class="card__requests-arrow" src="assets/images/icons/Down.svg" alt="arrow">
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#" class="card__requests">
+                            <img class="card__requests-icon" src="assets/images/icons/3dcube.svg" alt="icon">
+                            <div class="card__requests-content">
+                                <h6>طلب مامورية</h6>
+                                <p>بامكانك المتابعة </p>
+                            </div>
+                            <img class="card__requests-arrow" src="assets/images/icons/Down.svg" alt="arrow">
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#" class="card__requests">
+                            <img class="card__requests-icon" src="assets/images/icons/3dcube.svg" alt="icon">
+                            <div class="card__requests-content">
+                                <h6>طلب مامورية</h6>
+                                <p>بامكانك المتابعة </p>
+                            </div>
+                            <img class="card__requests-arrow" src="assets/images/icons/Down.svg" alt="arrow">
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <section class="form-section ">
-                <div class="card bg-white p-3 my-3 border-0">
-                    <div class="d-flex justify-content-between">
-                        <h5 class="text-primary fs-6 my-3">بحث وتصفية </h5>
-                        <div class="d-flex gap-3">
-                            <button class="btn btn-outline-secondary ">
-                                <span class="me-2"><img class="revert-img" src="assets/images/icons/excel.svg"
-                                        alt="excel"></span>
-                                طباعة اكسيل
-                            </button>
-                            <button class="btn btn-primary dashboard__add-btn">
-                                <span class="me-2"><img src="assets/images/icons/add-circle.svg" alt="add"></span>
-                                إضافة موظف جديد
-                            </button>
-                        </div>
-                    </div>
-                    <form action="">
-                        <div class="row">
-                            <!-- arabic Name -->
-                            <div class="col-md-6 my-2">
-                                <label for="arName" class="form-label">الاسم بالغة العربية </label>
-                                <input type="text" class="form-control" id="arName" placeholder="اسم المستخدم " />
-                            </div>
-                            <!-- English Name -->
-                            <div class="col-md-6 my-2">
-                                <label for="enName" class="form-label">الاسم باللغة الانجليزية </label>
-                                <input type="text" class="form-control" id="enName" placeholder="اسم المستخدم " />
-                            </div>
-                            <div class="col-md-12 my-2">
-                                <hr>
-                            </div>
-                            <div class="col-md-5 my-2">
-                                <label for="statusAr" class="form-label">الحالة الاولي بالعربية </label>
-                                <input type="text" class="form-control" id="statusAr" placeholder="اسم المستخدم "
-                                    disabled />
-                            </div>
-                            <div class="col-md-5 my-2">
-                                <label for="statusEn" class="form-label">الحالة الاولي بالانجليزية </label>
-                                <input type="text" class="form-control" id="statusEn" placeholder="اسم المستخدم "
-                                    disabled />
-                            </div>
-                            <div class="col-md-2 my-2">
-                                <div class="action_buttons">
-                                    <button class="btn btn-outline-primary d-flex px-2">
-                                        <span class="me-2">
-                                            <img src="assets/images/icons/edit-2.svg" alt="edit">
-                                        </span>
-                                        تعديل
-                                    </button>
-                                    <button class="btn btn-outline-secondary px-2">
-                                        <span>
-                                            <img src="assets/images/icons/trash.svg" alt="track">
-                                        </span>
 
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="col-md-5 my-2">
-                                <label for="statusAr" class="form-label">الحالة الاولي بالعربية </label>
-                                <input type="text" class="form-control" id="statusAr" placeholder="اسم المستخدم "
-                                    disabled />
-                            </div>
-                            <div class="col-md-5 my-2">
-                                <label for="statusEn" class="form-label">الحالة الاولي بالانجليزية </label>
-                                <input type="text" class="form-control" id="statusEn" placeholder="اسم المستخدم "
-                                    disabled />
-                            </div>
-                            <div class="col-md-2 my-2">
-                                <div class="action_buttons">
-                                    <button class="btn btn-outline-primary d-flex px-2">
-                                        <span class="me-2">
-                                            <img src="assets/images/icons/edit-2.svg" alt="edit">
-                                        </span>
-                                        تعديل
-                                    </button>
-                                    <button class="btn btn-outline-secondary px-2">
-                                        <span>
-                                            <img src="assets/images/icons/trash.svg" alt="track">
-                                        </span>
 
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="col-md-5 my-2">
-                                <label for="statusAr" class="form-label">الحالة الاولي بالعربية </label>
-                                <input type="text" class="form-control" id="statusAr" placeholder="اسم المستخدم "
-                                    disabled />
-                            </div>
-                            <div class="col-md-5 my-2">
-                                <label for="statusEn" class="form-label">الحالة الاولي بالانجليزية </label>
-                                <input type="text" class="form-control" id="statusEn" placeholder="اسم المستخدم "
-                                    disabled />
-                            </div>
-                            <div class="col-md-2 my-2">
-                                <div class="action_buttons">
-                                    <button class="btn btn-outline-primary d-flex px-2">
-                                        <span class="me-2">
-                                            <img src="assets/images/icons/edit-2.svg" alt="edit">
-                                        </span>
-                                        تعديل
-                                    </button>
-                                    <button class="btn btn-outline-secondary px-2">
-                                        <span>
-                                            <img src="assets/images/icons/trash.svg" alt="track">
-                                        </span>
-
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="col-md-12 my-2 d-flex justify-content-end mt-3">
-                                <button class="btn btn-outline-secondary mx-3">الغاء</button>
-                                <button class="btn btn-primary">التالي</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </section>
 
 
 
@@ -376,8 +322,10 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-
     <script src="assets/js/main.js"></script>
+    <script>
+
+    </script>
 </body>
 
 </html>
