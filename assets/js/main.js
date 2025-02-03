@@ -105,19 +105,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const cameraInput = document.getElementById('cameraInput');
     const previewImage = document.getElementById('previewImage');
-    const cameraContainer = document.getElementById('cameraContainer');
+    // const cameraContainer = document.getElementById('cameraContainer');
+    if (cameraInput) {
+        cameraInput.addEventListener('change', function () {
+            const file = cameraInput.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    previewImage.src = e.target.result;
+                    previewImage.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
 
-    cameraInput.addEventListener('change', function () {
-        const file = cameraInput.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                previewImage.src = e.target.result;
-                previewImage.style.display = 'block';
-            };
-            reader.readAsDataURL(file);
-        }
-    });
+    }
 
     // Select all dropdown menus
     const dropdownMenus = document.querySelectorAll('.input-group .dropdown-menu');

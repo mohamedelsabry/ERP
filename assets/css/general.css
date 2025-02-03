@@ -160,7 +160,8 @@ input {
     color: var(--gray-900);
 }
 
-.form-control:disabled {
+.form-control:disabled,
+.form-select:disabled {
     background-color: transparent;
     color: var(--gray-900);
     border: 0;

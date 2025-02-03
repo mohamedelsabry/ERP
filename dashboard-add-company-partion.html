@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeLab - Employee Dashboard</title>
     <link href="assets/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css">
+    <link rel="stylesheet" href="https://apalfrey.github.io/select2-bootstrap-5-theme/assets/css/rtl.css">
     <link href="assets/css/general.css" rel="stylesheet">
     <link href="assets/css/dashboard.css" rel="stylesheet">
 
@@ -34,6 +36,12 @@
                     <li><a class="dropdown-item " href="#">الاعدادات</a></li>
                     <li><a class="dropdown-item " href="#">الاعدادات</a></li>
                 </ul>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link show" href="#" id="notifications" role="button">
+                    <img class="nav-img" src="assets/images/icons/buildings.svg" alt="notifications">
+                    <span class="menu-text"> فروع الشركة </span>
+                </a>
             </li>
             <li class="nav-item dropdown ">
                 <a class="nav-link dropdown-toggle" href="#" id="employeeSettings" role="button"
@@ -68,16 +76,16 @@
                 </ul>
             </li>
             <li class="nav-item dropdown ">
-                <a class="nav-link dropdown-toggle show" href="#" id="attendance" role="button"
-                    data-bs-toggle="dropdown" aria-expanded="true">
+                <a class="nav-link dropdown-toggle " href="#" id="attendance" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
                     <img class="nav-img" src="assets/images/icons/calendar.svg" alt="attendance">
                     <span class="menu-text"> الحضور والانصراف </span>
                 </a>
-                <ul class="dropdown-menu show" aria-labelledby="attendance">
+                <ul class="dropdown-menu " aria-labelledby="attendance">
                     <li><a class="dropdown-item" href="#">الاحصائيات </a></li>
                     <li><a class="dropdown-item" href="#">حضور وانصراف الموظف </a></li>
                     <li><a class="dropdown-item" href="#">النص الاساسي </a></li>
-                    <li><a class="dropdown-item active" href="#">الاعدادات</a></li>
+                    <li><a class="dropdown-item " href="#">الاعدادات</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown ">
@@ -197,16 +205,18 @@
     </div>
 
 
+
+
     <div class="main-content">
 
         <div class="navbar bg-white border-bottom py-3 d-flex align-items-center justify-content-between">
             <div class="container">
                 <div class="navbar__title">
-                    <span class="navbar__title-main d-block fw-bold text-dark">الموظفين</span>
+                    <span class="navbar__title-main d-block fw-bold text-dark"> اضافة فرع جديد</span>
                     <div class="navbar__title-sub-container">
                         <a href="#" class="navbar__title-sub ">لوحة التحكم </a>
-                        <a href="#" class="navbar__title-sub ">الحضور والانصراف </a>
-                        <span class="navbar__title-sub  "> حضور وانصراف الموظف </span>
+                        <a href="#" class="navbar__title-sub ">الفروع </a>
+                        <span class="navbar__title-sub  "> اضافة فرع جديد </span>
                     </div>
                 </div>
                 <div class="navbar__actions d-flex align-items-center gap-2">
@@ -242,192 +252,173 @@
             </div>
         </div>
         <div class="container-fluid">
-            <div class="card bg-white border-0 p-3 justify-content-between d-flex flex-row my-3 align-items-center">
+            <div
+                class="card bg-white border-0 shadow-sm p-3 justify-content-between d-flex flex-row my-3 align-items-center">
                 <div class="card__content ms-4 ">
-                    <h5 class="card__title text-dark fw-bold">حضور وانصراف الموظف </h5>
+                    <h5 class="card__title text-dark fw-bold"> اضافة فرع جديد</h5>
                     <p class="card__description text-muted">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء.</p>
                 </div>
                 <div class="card__image">
-                    <img src="assets/images/icons/business-meeting2.svg" alt="business-meeting" class="img-fluid">
+                    <img src="assets/images/icons/business-meeting3.svg" alt="business-meeting" class="img-fluid">
                 </div>
             </div>
-            <div class="card bg-white border-0 p-3 ">
-                <div class="card__content ms-4 ">
-                    <h5 class="card__title text-dark fw-bold">تقديم الطلبات </h5>
-                    <p class="card__description text-muted">اختر نوع الاجازة التي تريد ان تعطيها للموظف . </p>
-                </div>
-                <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5">
-                    <div class="col">
-                        <a data-bs-toggle="modal" href="#exceptionModal" role="button" class="card__requests">
-                            <img class="card__requests-icon" src="assets/images/icons/3dcube.svg" alt="icon">
-                            <div class="card__requests-content">
-                                <h6>طلب مامورية</h6>
-                                <p>بامكانك المتابعة </p>
+            <section class="form-section ">
+                <div class="card bg-white p-3 my-3 border-0">
+                    <h5 class="text-primary fs-6 my-3"> بيانات اضافة فرع جديد </h5>
+                    <form action="">
+                        <div class="row">
+
+                            <div class="col-md-6 my-2">
+                                <label for="statusAr" class="form-label">رقم الفرع </label>
+                                <input type="text" class="form-control" id="statusAr" value="" placeholder="اكتب الرقم">
                             </div>
-                            <img class="card__requests-arrow" src="assets/images/icons/Down.svg" alt="arrow">
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a data-bs-toggle="modal" href="#exceptionModal" role="button" class="card__requests">
-                            <img class="card__requests-icon" src="assets/images/icons/3dcube.svg" alt="icon">
-                            <div class="card__requests-content">
-                                <h6>طلب اجازة </h6>
-                                <p>بامكانك المتابعة </p>
+                            <div class="col-md-6 my-2">
+                                <label for="statusEn" class="form-label">اسم الفرع </label>
+                                <input type="text" class="form-control" id="statusEn" value="" placeholder="اكتب الاسم">
                             </div>
-                            <img class="card__requests-arrow" src="assets/images/icons/Down.svg" alt="arrow">
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a data-bs-toggle="modal" href="#exceptionModal" role="button" class="card__requests">
-                            <img class="card__requests-icon" src="assets/images/icons/3dcube.svg" alt="icon">
-                            <div class="card__requests-content">
-                                <h6>طلب اذن</h6>
-                                <p>بامكانك المتابعة </p>
-                            </div>
-                            <img class="card__requests-arrow" src="assets/images/icons/Down.svg" alt="arrow">
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a data-bs-toggle="modal" href="#exceptionModal" role="button" class="card__requests">
-                            <img class="card__requests-icon" src="assets/images/icons/3dcube.svg" alt="icon">
-                            <div class="card__requests-content">
-                                <h6>طلب اضافي</h6>
-                                <p>بامكانك المتابعة </p>
-                            </div>
-                            <img class="card__requests-arrow" src="assets/images/icons/Down.svg" alt="arrow">
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a data-bs-toggle="modal" href="#exceptionModal" role="button" class="card__requests">
-                            <img class="card__requests-icon" src="assets/images/icons/3dcube.svg" alt="icon">
-                            <div class="card__requests-content">
-                                <h6>طلب اجازة عابرة</h6>
-                                <p>بامكانك المتابعة </p>
-                            </div>
-                            <img class="card__requests-arrow" src="assets/images/icons/Down.svg" alt="arrow">
-                        </a>
-                    </div>
-                </div>
-            </div>
 
+                            <div class="col-md-6 my-2">
+                                <label for="statusAr" class="form-label">الموقع علي الخريطة </label>
+                                <div class="location__input">
+                                    <input type="text" class="form-control form-location" id="statusAr" value=""
+                                        placeholder="ادخل الموقع">
+                                    <!-- Modal trigger button -->
+                                    <button type="button" class="location__input__button" data-bs-toggle="modal"
+                                        data-bs-target="#modalId">
+                                        <img src="assets/images/icons/map-pin.svg" alt="">
+                                    </button>
 
-
-
-
-
-
-
-        </div>
-
-    </div>
-    <div class="modal fade" id="exceptionModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
-        tabindex="-1">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title text-primary fs-6 my-3">طلب مامورية </h5>
-
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <form>
-                            <div class="row gy-3">
-                                <!-- Job Name -->
-                                <div class="col-md-12 my-2">
-                                    <label for="name" class="form-label">الاسم </label>
-                                    <select class="form-select" id="name">
-                                        <option selected>اختر من القائمة </option>
-                                        <option value="1">مدير</option>
-                                        <option value="3">مسؤل توظيف</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-6 my-2">
-                                    <label for="status" class="form-label">حالة المامورية </label>
-                                    <select class="form-select" id="status">
-                                        <option selected>اختر من القائمة </option>
-                                        <option value="1">مدير</option>
-                                        <option value="3">مسؤل توظيف</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-6 my-2">
-                                    <label for="projectName" class="form-label">اسم المشروع </label>
-                                    <select class="form-select" id="projectName">
-                                        <option selected>اختر من القائمة </option>
-                                        <option value="1">مدير</option>
-                                        <option value="3">مسؤل توظيف</option>
-                                    </select>
-                                </div>
-
-                                <!-- appointment Date -->
-                                <div class="col-md-6 my-2">
-                                    <label for="appointmentDate" class="form-label"> التاريخ من </label>
-                                    <input type="date" class="form-control" id="appointmentDate" />
-                                </div>
-                                <!-- appointment Date -->
-                                <div class="col-md-6 my-2">
-                                    <label for="appointmentDate" class="form-label">التاريخ الي</label>
-                                    <input type="date" class="form-control" id="appointmentDate" />
-                                </div>
-                                <!-- appointment Date -->
-                                <div class="col-md-12 my-2">
-                                    <label for="location" class="form-label"> الموقع</label>
-                                    <input type="text" class="form-control" id="location" placeholder="ادخل الموقع" />
-                                </div>
-                                <div class="col-md-12 my-2">
-                                    <label for="notes" class="form-label"> ملاحظات</label>
-                                    <textarea class="form-control" id="notes" rows="3"
-                                        placeholder="اكتب ملاحظاتك"></textarea>
-
-                                </div>
-                                <div class="col-md-12 my-2">
-                                    <div class="file-upload">
-                                        <div class="file-upload__container">
-                                            <label for="fileInput" class="file-upload__label">
-                                                <div class="file-upload__icon">
-                                                    <img src="assets/images/icons/upload.svg" alt="apload img">
+                                    <!-- Modal Body -->
+                                    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+                                    <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static"
+                                        data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId"
+                                        aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg"
+                                            role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="modalTitleId">
+                                                        اضافة عنوان الفرع
+                                                    </h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
                                                 </div>
-                                                <div class="file-upload__text">
-                                                    قم بسحب ملف وإفلاته أو قم بتحميل ملف جديد
+                                                <div class="modal-body">
+                                                    <iframe
+                                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57990.176494538406!2d46.634095954538694!3d24.71362404553246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2seg!4v1738601425941!5m2!1sen!2seg"
+                                                        width="100%" height="450" style="border:0;" allowfullscreen=""
+                                                        loading="lazy"
+                                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                                                 </div>
-                                                <div class="file-upload__support">
-                                                    الصيغ المدعومة: PNG, JPG
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">
+                                                        Close
+                                                    </button>
+                                                    <button type="button" class="btn btn-primary">Save</button>
                                                 </div>
-                                            </label>
-                                            <input type="file" id="fileInput" class="file-upload__input"
-                                                accept="image/png, image/jpeg">
-                                            <div class="file-upload__preview">
-                                                <!-- Preview of uploaded files will appear here -->
                                             </div>
                                         </div>
                                     </div>
 
+                                    <!-- Optional: Place to the bottom of scripts -->
+                                    <script>
+                                        const myModal = new bootstrap.Modal(
+                                            document.getElementById("modalId"),
+                                            options,
+                                        );
+                                    </script>
+
                                 </div>
-
-
-
                             </div>
-                        </form>
-                    </div>
+                            <div class="col-md-6 my-2">
+                                <label for="manager" class="form-label">مدير الفرع </label>
+                                <select class="form-select" name="manager" id="">
+                                    <option selected> اختر من القائمة</option>
+                                    <option value="احمد علي">احمد علي</option>
+                                    <option value="مصطفي علي">مصطفي علي</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 my-2">
+                                <label for="manager" class="form-label">مدير الفرع </label>
+                                <select class="form-select" id="multiple-select-field"
+                                    data-placeholder=" اختر من القائمة" multiple>
+                                    <option>Christmas Island</option>
+                                    <option>South Sudan</option>
+                                    <option>Jamaica</option>
+                                    <option>Kenya</option>
+                                    <option>French Guiana</option>
+                                    <option>Mayotta</option>
+                                    <option>Liechtenstein</option>
+                                    <option>Denmark</option>
+                                    <option>Eritrea</option>
+                                    <option>Gibraltar</option>
+
+                                </select>
+                            </div>
+                            <div class="col-md-6 my-2">
+                                <label for="manager" class="form-label">الحالة </label>
+                                <select class="form-select" name="manager" id="">
+                                    <option selected>اختر من القائمة</option>
+                                    <option value="نشط">نشط</option>
+                                    <option value=" غير نشط"> غير نشط</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-12 my-2">
+                                <label for="manager" class="form-label">الحالة </label>
+                                <textarea class="form-control" name="notes" id="notes" placeholder="اكتب ملاحظاتك"
+                                    rows="3"></textarea>
+                            </div>
+
+
+                            <div class="col-md-12 my-2 d-flex justify-content-end mt-3">
+                                <button class="btn btn-outline-secondary mx-3">العودة</button>
+                                <button class="btn btn-primary">حفظ التغييرات</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="modal-footer">
-                    <div class="col-md-12 my-2 d-flex justify-content-end mt-3">
-                        <button class="btn btn-outline-secondary mx-3" type="button" data-bs-dismiss="modal">منح
-                            الطلب</button>
-                        <button class="btn btn-primary">تقديم طلب</button>
+            </section>
 
+
+        </div>
+    </div>
+    <div class="modal fade" id="successModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content success-modal">
+                <div class="success-modal__content">
+                    <div class="success-modal__emoji">
+                        <img src="assets/images/icons/added-icon.svg" alt="add partition image">
                     </div>
-
+                    <h2 class="success-modal__title">تهانينا! لقد تم تعيين كلمة المرور بنجاح</h2>
+                    <p class="success-modal__text">لقد تم تحديث كلمة المرور الخاصة بك بنجاح</p>
+                    <button class="success-modal__button">العودة إلي تسجيل الدخول</button>
                 </div>
             </div>
         </div>
     </div>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
     <script>
+        // Show modal automatically
+        document.addEventListener('DOMContentLoaded', function () {
+            new bootstrap.Modal(document.getElementById('successModal')).show();
+        });
+    </script>
+    <script src="assets/js/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.full.min.js"></script>
 
+
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        $('#multiple-select-field').select2({
+            theme: "bootstrap-5",
+            width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+            placeholder: $(this).data('placeholder'),
+            closeOnSelect: false,
+        });
     </script>
 </body>
 

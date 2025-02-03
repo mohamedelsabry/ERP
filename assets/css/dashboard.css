@@ -35,6 +35,13 @@ body {
     scrollbar-color: var(--gray-400) var(--gray-100);
     scrollbar-width: thin;
 
+    .nav-link {
+        &.show {
+            background-color: var(--brand-color-50);
+            color: var(--main-color);
+        }
+    }
+
     &.collapsed {
         .nav-link {
             padding: 0.5rem;
@@ -490,6 +497,8 @@ body {
     background-repeat: no-repeat;
     background-position: left 10px center;
 }
+
+
 
 /* Table */
 .employee-table {
@@ -949,6 +958,93 @@ input[type="date"i]::-webkit-calendar-picker-indicator {
 
 .card-borded-dashed {
     border-style: dashed;
+}
+
+
+/* statistics dashboard  */
+.statistics {
+    min-height: 250px;
+}
+
+.statistics__text {
+    font-size: 1rem;
+    color: #001828;
+    margin: 0;
+}
+
+.statistics__select {
+    .nav-link {
+        padding: 0.3rem 0.8rem;
+    }
+
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+        background-color: var(--main-color);
+    }
+}
+
+.statistics__chart {
+    margin-top: 8px;
+}
+
+/* add new company partition page  */
+
+.location__input {
+    position: relative;
+
+    .location__input__button {
+        position: absolute;
+        inset-inline-end: 10px;
+        width: 30px;
+        height: 30px;
+        top: 2px;
+        background-color: transparent;
+        border: 0;
+    }
+}
+
+.success-modal {
+    border-radius: 1rem;
+    border: none;
+    padding: 2rem 1rem;
+}
+
+.success-modal__content {
+    text-align: center;
+}
+
+.success-modal__emoji {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.success-modal__title {
+    color: var(--color-head);
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.success-modal__text {
+    color: var(--color-label);
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+}
+
+.success-modal__button {
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-base);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-family: 'Cairo', sans-serif;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.success-modal__button:hover {
+    background: var(--color-head);
 }
 
 @media (max-width: 992px) {

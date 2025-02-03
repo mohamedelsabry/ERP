@@ -35,6 +35,12 @@
                     <li><a class="dropdown-item " href="#">الاعدادات</a></li>
                 </ul>
             </li>
+            <li class="nav-item ">
+                <a class="nav-link show" href="#" id="notifications" role="button">
+                    <img class="nav-img" src="assets/images/icons/buildings.svg" alt="notifications">
+                    <span class="menu-text"> فروع الشركة </span>
+                </a>
+            </li>
             <li class="nav-item dropdown ">
                 <a class="nav-link dropdown-toggle" href="#" id="employeeSettings" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -68,16 +74,16 @@
                 </ul>
             </li>
             <li class="nav-item dropdown ">
-                <a class="nav-link dropdown-toggle show" href="#" id="attendance" role="button"
-                    data-bs-toggle="dropdown" aria-expanded="true">
+                <a class="nav-link dropdown-toggle " href="#" id="attendance" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
                     <img class="nav-img" src="assets/images/icons/calendar.svg" alt="attendance">
                     <span class="menu-text"> الحضور والانصراف </span>
                 </a>
-                <ul class="dropdown-menu show" aria-labelledby="attendance">
+                <ul class="dropdown-menu " aria-labelledby="attendance">
                     <li><a class="dropdown-item" href="#">الاحصائيات </a></li>
                     <li><a class="dropdown-item" href="#">حضور وانصراف الموظف </a></li>
                     <li><a class="dropdown-item" href="#">النص الاساسي </a></li>
-                    <li><a class="dropdown-item active" href="#">الاعدادات</a></li>
+                    <li><a class="dropdown-item " href="#">الاعدادات</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown ">
@@ -197,16 +203,17 @@
     </div>
 
 
+
+
     <div class="main-content">
 
         <div class="navbar bg-white border-bottom py-3 d-flex align-items-center justify-content-between">
             <div class="container">
                 <div class="navbar__title">
-                    <span class="navbar__title-main d-block fw-bold text-dark">الموظفين</span>
+                    <span class="navbar__title-main d-block fw-bold text-dark">فروع الشركة</span>
                     <div class="navbar__title-sub-container">
                         <a href="#" class="navbar__title-sub ">لوحة التحكم </a>
-                        <a href="#" class="navbar__title-sub ">الحضور والانصراف </a>
-                        <span class="navbar__title-sub  "> حضور وانصراف الموظف </span>
+                        <span class="navbar__title-sub  "> الفروع </span>
                     </div>
                 </div>
                 <div class="navbar__actions d-flex align-items-center gap-2">
@@ -242,193 +249,260 @@
             </div>
         </div>
         <div class="container-fluid">
-            <div class="card bg-white border-0 p-3 justify-content-between d-flex flex-row my-3 align-items-center">
+            <div
+                class="card bg-white border-0 shadow-sm p-3 justify-content-between d-flex flex-row my-3 align-items-center">
                 <div class="card__content ms-4 ">
-                    <h5 class="card__title text-dark fw-bold">حضور وانصراف الموظف </h5>
+                    <h5 class="card__title text-dark fw-bold">فروع الشركة</h5>
                     <p class="card__description text-muted">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء.</p>
                 </div>
                 <div class="card__image">
-                    <img src="assets/images/icons/business-meeting2.svg" alt="business-meeting" class="img-fluid">
+                    <img src="assets/images/icons/business-meeting3.svg" alt="business-meeting" class="img-fluid">
                 </div>
             </div>
-            <div class="card bg-white border-0 p-3 ">
-                <div class="card__content ms-4 ">
-                    <h5 class="card__title text-dark fw-bold">تقديم الطلبات </h5>
-                    <p class="card__description text-muted">اختر نوع الاجازة التي تريد ان تعطيها للموظف . </p>
-                </div>
-                <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5">
-                    <div class="col">
-                        <a data-bs-toggle="modal" href="#exceptionModal" role="button" class="card__requests">
-                            <img class="card__requests-icon" src="assets/images/icons/3dcube.svg" alt="icon">
-                            <div class="card__requests-content">
-                                <h6>طلب مامورية</h6>
-                                <p>بامكانك المتابعة </p>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="stats-card">
+                        <div class="stats-card__content">
+                            <div class="stats-card__info">
+                                <h3 class="stats-card__title">اجمالي الفروع</h3>
+                                <div class="stats-card__number">12</div>
+
                             </div>
-                            <img class="card__requests-arrow" src="assets/images/icons/Down.svg" alt="arrow">
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a data-bs-toggle="modal" href="#exceptionModal" role="button" class="card__requests">
-                            <img class="card__requests-icon" src="assets/images/icons/3dcube.svg" alt="icon">
-                            <div class="card__requests-content">
-                                <h6>طلب اجازة </h6>
-                                <p>بامكانك المتابعة </p>
-                            </div>
-                            <img class="card__requests-arrow" src="assets/images/icons/Down.svg" alt="arrow">
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a data-bs-toggle="modal" href="#exceptionModal" role="button" class="card__requests">
-                            <img class="card__requests-icon" src="assets/images/icons/3dcube.svg" alt="icon">
-                            <div class="card__requests-content">
-                                <h6>طلب اذن</h6>
-                                <p>بامكانك المتابعة </p>
-                            </div>
-                            <img class="card__requests-arrow" src="assets/images/icons/Down.svg" alt="arrow">
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a data-bs-toggle="modal" href="#exceptionModal" role="button" class="card__requests">
-                            <img class="card__requests-icon" src="assets/images/icons/3dcube.svg" alt="icon">
-                            <div class="card__requests-content">
-                                <h6>طلب اضافي</h6>
-                                <p>بامكانك المتابعة </p>
-                            </div>
-                            <img class="card__requests-arrow" src="assets/images/icons/Down.svg" alt="arrow">
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a data-bs-toggle="modal" href="#exceptionModal" role="button" class="card__requests">
-                            <img class="card__requests-icon" src="assets/images/icons/3dcube.svg" alt="icon">
-                            <div class="card__requests-content">
-                                <h6>طلب اجازة عابرة</h6>
-                                <p>بامكانك المتابعة </p>
-                            </div>
-                            <img class="card__requests-arrow" src="assets/images/icons/Down.svg" alt="arrow">
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-        </div>
-
-    </div>
-    <div class="modal fade" id="exceptionModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
-        tabindex="-1">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title text-primary fs-6 my-3">طلب مامورية </h5>
-
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <form>
-                            <div class="row gy-3">
-                                <!-- Job Name -->
-                                <div class="col-md-12 my-2">
-                                    <label for="name" class="form-label">الاسم </label>
-                                    <select class="form-select" id="name">
-                                        <option selected>اختر من القائمة </option>
-                                        <option value="1">مدير</option>
-                                        <option value="3">مسؤل توظيف</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-6 my-2">
-                                    <label for="status" class="form-label">حالة المامورية </label>
-                                    <select class="form-select" id="status">
-                                        <option selected>اختر من القائمة </option>
-                                        <option value="1">مدير</option>
-                                        <option value="3">مسؤل توظيف</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-6 my-2">
-                                    <label for="projectName" class="form-label">اسم المشروع </label>
-                                    <select class="form-select" id="projectName">
-                                        <option selected>اختر من القائمة </option>
-                                        <option value="1">مدير</option>
-                                        <option value="3">مسؤل توظيف</option>
-                                    </select>
-                                </div>
-
-                                <!-- appointment Date -->
-                                <div class="col-md-6 my-2">
-                                    <label for="appointmentDate" class="form-label"> التاريخ من </label>
-                                    <input type="date" class="form-control" id="appointmentDate" />
-                                </div>
-                                <!-- appointment Date -->
-                                <div class="col-md-6 my-2">
-                                    <label for="appointmentDate" class="form-label">التاريخ الي</label>
-                                    <input type="date" class="form-control" id="appointmentDate" />
-                                </div>
-                                <!-- appointment Date -->
-                                <div class="col-md-12 my-2">
-                                    <label for="location" class="form-label"> الموقع</label>
-                                    <input type="text" class="form-control" id="location" placeholder="ادخل الموقع" />
-                                </div>
-                                <div class="col-md-12 my-2">
-                                    <label for="notes" class="form-label"> ملاحظات</label>
-                                    <textarea class="form-control" id="notes" rows="3"
-                                        placeholder="اكتب ملاحظاتك"></textarea>
-
-                                </div>
-                                <div class="col-md-12 my-2">
-                                    <div class="file-upload">
-                                        <div class="file-upload__container">
-                                            <label for="fileInput" class="file-upload__label">
-                                                <div class="file-upload__icon">
-                                                    <img src="assets/images/icons/upload.svg" alt="apload img">
-                                                </div>
-                                                <div class="file-upload__text">
-                                                    قم بسحب ملف وإفلاته أو قم بتحميل ملف جديد
-                                                </div>
-                                                <div class="file-upload__support">
-                                                    الصيغ المدعومة: PNG, JPG
-                                                </div>
-                                            </label>
-                                            <input type="file" id="fileInput" class="file-upload__input"
-                                                accept="image/png, image/jpeg">
-                                            <div class="file-upload__preview">
-                                                <!-- Preview of uploaded files will appear here -->
-                                            </div>
-                                        </div>
+                            <div class="stats-card__chart">
+                                <div class="progress-ring">
+                                    <div class="progress-ring__circle progress-ring__circle--orange">
+                                        <span class="progress-ring__percentage">20%</span>
                                     </div>
-
                                 </div>
-
-
+                            </div>
+                        </div>
+                        <div class="stats-card__details">
+                            <span class="stats-card__growth stats-card__growth--positive"><strong>20%</strong>
+                                زيادة</span>
+                            <span class="stats-card__period">الشهر الماضي</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="stats-card">
+                        <div class="stats-card__content">
+                            <div class="stats-card__info">
+                                <h3 class="stats-card__title">الفروع النشطة</h3>
+                                <div class="stats-card__number">12</div>
 
                             </div>
-                        </form>
+                            <div class="stats-card__chart">
+                                <div class="progress-ring">
+                                    <div class="progress-ring__circle progress-ring__circle--orange">
+                                        <span class="progress-ring__percentage">20%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stats-card__details">
+                            <span class="stats-card__growth stats-card__growth--positive"><strong>20%</strong>
+                                زيادة</span>
+                            <span class="stats-card__period">الشهر الماضي</span>
+                        </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <div class="col-md-12 my-2 d-flex justify-content-end mt-3">
-                        <button class="btn btn-outline-secondary mx-3" type="button" data-bs-dismiss="modal">منح
-                            الطلب</button>
-                        <button class="btn btn-primary">تقديم طلب</button>
+                <div class="col-md-4 col-sm-6">
+                    <div class="stats-card">
+                        <div class="stats-card__content">
+                            <div class="stats-card__info">
+                                <h3 class="stats-card__title">الفروع الغير نشطة</h3>
+                                <div class="stats-card__number">12</div>
+
+                            </div>
+                            <div class="stats-card__chart">
+                                <div class="progress-ring">
+                                    <div class="progress-ring__circle progress-ring__circle--orange">
+                                        <span class="progress-ring__percentage">20%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stats-card__details">
+                            <span class="stats-card__growth stats-card__growth--positive"><strong>20%</strong>
+                                زيادة</span>
+                            <span class="stats-card__period">الشهر الماضي</span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="dashboard">
+                <div class="container py-4">
+                    <!-- Header Actions -->
+                    <div class="dashboard__actions mb-4 d-flex justify-content-between align-items-center">
+                        <div class="dashboard__search">
+                            <input type="search" class="form-control" placeholder="البحث">
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <button class="btn btn-light dashboard__export-btn py-2">
+                                <span class="me-2"><img src="assets/images/icons/import.svg" alt="import"></span>
+                                تصدير
+                            </button>
+                            <button class="btn btn-primary dashboard__add-btn">
+                                <span class="me-2"><img src="assets/images/icons/add-circle.svg" alt="add"></span>
+                                إضافة موظف جديد
+                            </button>
+                        </div>
 
                     </div>
 
+                    <!-- Table -->
+                    <div class="table-responsive">
+                        <table class="table employee-table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <input type="checkbox" class="form-check-input">
+                                    </th>
+                                    <th>#</th>
+                                    <th>اسم الموظف</th>
+                                    <th>البريد الإلكتروني</th>
+                                    <th>الدور الوظيفي</th>
+                                    <th>الوحدة</th>
+                                    <th>القسم</th>
+                                    <th>الحالة</th>
+                                    <th>
+                                        <img class="employee-table__icon img-fluid"
+                                            src="assets/images/icons/grid-edit.svg" alt="grid-edit">
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" class="form-check-input"></td>
+                                    <td>1</td>
+                                    <td>
+                                        <div class="employee-info">
+                                            <img src="assets/images/avatar.svg" class="employee-info__avatar" alt="">
+
+                                            <span> علي</span>
+                                        </div>
+                                    </td>
+                                    <td>Codelab@gmail.com</td>
+                                    <td>الشؤون الإدارية</td>
+                                    <td>إدارة الشؤون الإدارية</td>
+                                    <td>الإدارة العليا</td>
+                                    <td><span class="badge status-badge status-badge--active">نشط</span></td>
+                                    <td>
+                                        <!-- <button class="btn btn-link">⋮</button> -->
+                                        <div class="btn-group">
+                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                                                id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true"
+                                                aria-expanded="false">
+                                                ⋮
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="form-check-input"></td>
+                                    <td>1</td>
+                                    <td>
+                                        <div class="employee-info">
+                                            <img src="assets/images/avatar.svg" class="employee-info__avatar" alt="">
+
+                                            <span> علي</span>
+                                        </div>
+                                    </td>
+                                    <td>Codelab@gmail.com</td>
+                                    <td>الشؤون الإدارية</td>
+                                    <td>إدارة الشؤون الإدارية</td>
+                                    <td>الإدارة العليا</td>
+                                    <td><span class="badge status-badge status-badge--inactive">محظور</span></td>
+                                    <td>
+                                        <!-- <button class="btn btn-link">⋮</button> -->
+                                        <div class="btn-group">
+                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                                                id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true"
+                                                aria-expanded="false">
+                                                ⋮
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="form-check-input"></td>
+                                    <td>1</td>
+                                    <td>
+                                        <div class="employee-info">
+                                            <img src="assets/images/avatar.svg" class="employee-info__avatar" alt="">
+
+                                            <span> علي</span>
+                                        </div>
+                                    </td>
+                                    <td>Codelab@gmail.com</td>
+                                    <td>الشؤون الإدارية</td>
+                                    <td>إدارة الشؤون الإدارية</td>
+                                    <td>الإدارة العليا</td>
+                                    <td><span class="badge status-badge status-badge--pending">موقوف</span></td>
+                                    <td>
+                                        <!-- <button class="btn btn-link">⋮</button> -->
+                                        <div class="btn-group">
+                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                                                id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true"
+                                                aria-expanded="false">
+                                                ⋮
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- Repeat similar rows for other employees -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                        <div class="pagination-info">
+                            عرض 1 من 10 النتائج 66
+                        </div>
+                        <nav>
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#">&lt;</a></li>
+                                <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">&gt;</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    </script>
+
+
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

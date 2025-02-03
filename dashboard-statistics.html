@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeLab - Employee Dashboard</title>
+    <link href="assets/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link href="assets/css/general.css" rel="stylesheet">
+    <link href="assets/css/dashboard.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="sidebar shadow-sm">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <img src="assets/images/logo.svg" alt="CodeLab Logo" class="img-fluid sidebar__logo">
+            <img src="assets/images/fav.svg" alt="CodeLab Logo" class="img-fluid sidebar__icon">
+        </div>
+
+        <nav class="nav flex-column">
+            <button class="nav-link " id="toggleSidebar">
+                <img class="nav-img" src="assets/images/icons/dashboard-square-01.svg" alt="dashboard">
+                <span class="menu-text">لوحة التحكم</span>
+            </button>
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" id="employee" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="nav-img" src="assets/images/icons/profile-2user.svg" alt="employee">
+                    <span class="menu-text"> الموظفين </span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="employee">
+                    <li><a class="dropdown-item active" href="#">جميع الموظفيين</a></li>
+                    <li><a class="dropdown-item " href="#">الاعدادات</a></li>
+                    <li><a class="dropdown-item " href="#">الاعدادات</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle " href="#" id="attendance" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="nav-img" src="assets/images/icons/calendar.svg" alt="attendance">
+                    <span class="menu-text"> الحضور والانصراف </span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="attendance">
+                    <li><a class="dropdown-item" href="#">جميع الموظفيين</a></li>
+                    <li><a class="dropdown-item " href="#">الاعدادات</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle " href="#" id="salaries" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="nav-img" src="assets/images/icons/dollar-circle.svg" alt="salaries">
+                    <span class="menu-text"> المرتبات </span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="salaries">
+                    <li><a class="dropdown-item" href="#">جميع الموظفيين</a></li>
+                    <li><a class="dropdown-item" href="#">الاعدادات</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle " href="#" id="accounts" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="nav-img" src="assets/images/icons/math.svg" alt="accounts">
+                    <span class="menu-text"> الحسابات </span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="accounts">
+                    <li><a class="dropdown-item" href="#">جميع الموظفيين</a></li>
+                    <li><a class="dropdown-item" href="#">الاعدادات</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle " href="#" id="users" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="nav-img" src="assets/images/icons/user-cirlce-add.svg" alt="users">
+                    <span class="menu-text"> شؤون العاملين </span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="users">
+                    <li><a class="dropdown-item" href="#">جميع الموظفيين</a></li>
+                    <li><a class="dropdown-item" href="#">الاعدادات</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle " href="#" id="inventories" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="nav-img" src="assets/images/icons/3dcube.svg" alt="inventories">
+                    <span class="menu-text"> برنامج المخازن </span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="inventories">
+                    <li><a class="dropdown-item" href="#">جميع الموظفيين</a></li>
+                    <li><a class="dropdown-item" href="#">الاعدادات</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle " href="#" id="purchases" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="nav-img" src="assets/images/icons/receipt-item.svg" alt="purchases">
+                    <span class="menu-text"> المشتريات </span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="purchases">
+                    <li><a class="dropdown-item" href="#">جميع الموظفيين</a></li>
+                    <li><a class="dropdown-item" href="#">الاعدادات</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle " href="#" id="assets" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="nav-img" src="assets/images/icons/receipt-item.svg" alt="assets">
+                    <span class="menu-text"> الاصول الثابة والت.. </span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="assets">
+                    <li><a class="dropdown-item" href="#">جميع الموظفيين</a></li>
+                    <li><a class="dropdown-item" href="#">الاعدادات</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle " href="#" id="peaple" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="nav-img" src="assets/images/icons/people.svg" alt="peaple">
+                    <span class="menu-text"> بوابة العملاء</span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="peaple">
+                    <li><a class="dropdown-item" href="#">جميع الموظفيين</a></li>
+                    <li><a class="dropdown-item" href="#">الاعدادات</a></li>
+                </ul>
+            </li>
+            <li class="nav-item mt-3">
+                <span class="nav-link nav-link__settings">
+                    التفضيلات
+                </span>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="#" id="notifications" role="button">
+                    <img class="nav-img" src="assets/images/icons/notification-bing.svg" alt="notifications">
+                    <span class="menu-text"> الاشعارات </span>
+                </a>
+            </li>
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle " href="#" id="settings" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="nav-img" src="assets/images/icons/setting-2.svg" alt="settings">
+                    <span class="menu-text"> الاعدادات</span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="peaple">
+                    <li><a class="dropdown-item" href="#">جميع الموظفيين</a></li>
+                    <li><a class="dropdown-item" href="#">الاعدادات</a></li>
+                </ul>
+            </li>
+
+            <!-- Add more menu items -->
+        </nav>
+        <div class="navbar__logo nav-item navbar__logo--sidebar  d-flex align-items-center gap-3">
+            <a href="#" class="nav-link bordered border-3 " id="settings" role="button" aria-expanded="false">
+                <div class="navbar__logo-icon">
+                    <img src="assets/images/icons/chat-icon.svg" alt="chat-icon" width="30" height="30">
+                </div>
+                <div class="navbar__logo-text">
+                    <span class="navbar__logo-title d-block fw-bold text-dark">CodeLab</span>
+                    <span class="navbar__logo-subtitle d-block text-muted">الموارد البشرية</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+
+    <div class="main-content">
+
+        <div class="navbar bg-white border-bottom py-3 d-flex align-items-center justify-content-between">
+            <div class="container">
+                <div class="navbar__title">
+                    <span class="navbar__title-main d-block fw-bold text-dark">الموظفين</span>
+                    <div class="navbar__title-sub-container">
+                        <a href="#" class="navbar__title-sub ">لوحة التحكم </a>
+                        <a href="#" class="navbar__title-sub ">الحضور والانصراف </a>
+                        <span class="navbar__title-sub  "> الاحصائيات </span>
+                    </div>
+                </div>
+                <div class="navbar__actions d-flex align-items-center gap-2">
+                    <button class="navbar__action-btn btn btn-light rounded" aria-label="Search">
+                        <img src="assets/images/icons/language-square.svg" alt="language">
+                    </button>
+                    <button class="navbar__action-btn btn btn-light rounded" aria-label="Notification">
+                        <img src="assets/images/icons/notification-bing.svg" alt="notification-bing">
+                    </button>
+                    <button class="navbar__action-btn btn btn-light rounded" aria-label="Settings">
+                        <img src="assets/images/icons/sms-tracking.svg" alt="sms-tracking">
+                    </button>
+                </div>
+
+                <div class="navbar__logo nav-item dropdown d-flex align-items-center gap-3">
+                    <a href="#" class="nav-link bordered border-3 dropdown-toggle" id="settings" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="navbar__logo-icon">
+                            <img src="assets/images/avatar.svg" alt="CodeLab" width="50" height="50">
+                        </div>
+                        <div class="navbar__logo-text">
+                            <span class="navbar__logo-title d-block fw-bold text-dark">CodeLab</span>
+                            <span class="navbar__logo-subtitle d-block text-muted">الموارد البشرية</span>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu mt-3" aria-labelledby="settings" data-popper-placement="bottom-end"
+                        style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate3d(0px, 54.4px, 0px);">
+                        <li><a class="dropdown-item active" href="#">تعديل الملف الشخصي</a></li>
+                        <li><a class="dropdown-item " href="#">تسجيل الخروج</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div
+                class="card bg-white border-0 shadow-sm p-3 justify-content-between d-flex flex-row my-3 align-items-center">
+                <div class="card__content ms-4 ">
+                    <h5 class="card__title text-dark fw-bold">الاحصائيات</h5>
+                    <p class="card__description text-muted">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء.</p>
+                </div>
+                <div class="card__image">
+                    <img src="assets/images/icons/business-meeting.svg" alt="business-meeting" class="img-fluid">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="stats-card">
+                        <div class="stats-card__content">
+                            <div class="stats-card__info">
+                                <h3 class="stats-card__title">عدد ايام الغياب</h3>
+                                <div class="stats-card__number">12</div>
+
+                            </div>
+                            <div class="stats-card__chart">
+                                <div class="progress-ring">
+                                    <div class="progress-ring__circle progress-ring__circle--orange">
+                                        <span class="progress-ring__percentage">20%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stats-card__details">
+                            <span class="stats-card__growth stats-card__growth--positive"><strong>20%</strong>
+                                زيادة</span>
+                            <span class="stats-card__period">الشهر الماضي</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stats-card">
+                        <div class="stats-card__content">
+                            <div class="stats-card__info">
+                                <h3 class="stats-card__title">عدد الساعات الإضافية</h3>
+                                <div class="stats-card__number">12</div>
+
+                            </div>
+                            <div class="stats-card__chart">
+                                <div class="progress-ring">
+                                    <div class="progress-ring__circle progress-ring__circle--orange">
+                                        <span class="progress-ring__percentage">20%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stats-card__details">
+                            <span class="stats-card__growth stats-card__growth--positive"><strong>20%</strong>
+                                زيادة</span>
+                            <span class="stats-card__period">الشهر الماضي</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stats-card">
+                        <div class="stats-card__content">
+                            <div class="stats-card__info">
+                                <h3 class="stats-card__title">عدد الإجازات</h3>
+                                <div class="stats-card__number">12</div>
+
+                            </div>
+                            <div class="stats-card__chart">
+                                <div class="progress-ring">
+                                    <div class="progress-ring__circle progress-ring__circle--orange">
+                                        <span class="progress-ring__percentage">20%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stats-card__details">
+                            <span class="stats-card__growth stats-card__growth--positive"><strong>20%</strong>
+                                زيادة</span>
+                            <span class="stats-card__period">الشهر الماضي</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stats-card">
+                        <div class="stats-card__content">
+                            <div class="stats-card__info">
+                                <h3 class="stats-card__title">عدد التأخيرات</h3>
+                                <div class="stats-card__number">12</div>
+
+                            </div>
+                            <div class="stats-card__chart">
+                                <div class="progress-ring">
+                                    <div class="progress-ring__circle progress-ring__circle--orange">
+                                        <span class="progress-ring__percentage">20%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stats-card__details">
+                            <span class="stats-card__growth stats-card__growth--positive"><strong>20%</strong>
+                                زيادة</span>
+                            <span class="stats-card__period">الشهر الماضي</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="statistics card bg-white p-3 my-3 border-0">
+                        <div class="container">
+                            <div class="statistics__container d-flex justify-content-between align-items-center">
+                                <div class="statistics__select">
+                                    <select class="form-select " name="year" id="year">
+                                        <option value="year" selected>year</option>
+                                        <option value="month">month</option>
+                                        <option value="day">day</option>
+                                    </select>
+                                </div>
+
+                                <h3 class="statistics__text">Working hours for year</h3>
+                            </div>
+                            <div class="statistics__chart">
+                                <img class="img-fluid py-3" src="assets/images/chart1.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="statistics card bg-white p-3 my-3 border-0">
+                        <div class="container">
+                            <div class="statistics__container d-flex justify-content-between align-items-center">
+                                <div class="statistics__select">
+                                    <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                                data-bs-target="#pills-home" type="button" role="tab"
+                                                aria-controls="pills-home" aria-selected="true">Today</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                                data-bs-target="#pills-profile" type="button" role="tab"
+                                                aria-controls="pills-profile" aria-selected="false">Week</button>
+                                        </li>
+                                    </ul>
+
+                                </div>
+
+                                <h3 class="statistics__text">Absence and vacation</h3>
+                            </div>
+
+                            <div class="statistics__chart">
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                        aria-labelledby="pills-home-tab">
+                                        <img class="img-fluid py-3" src="assets/images/chart2.svg" alt="">
+
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                        aria-labelledby="pills-profile-tab">
+                                        <img class="img-fluid py-3" src="assets/images/chart2.svg" alt="">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="statistics card bg-white p-3 my-3 border-0">
+                        <div class="container">
+                            <div class="statistics__container d-flex justify-content-between align-items-center">
+                                <div class="statistics__select">
+
+                                </div>
+
+                                <h3 class="statistics__text"> Overtime and delay</h3>
+                            </div>
+                            <div class="statistics__chart">
+                                <img class="img-fluid py-3" src="assets/images/chart3.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="statistics card bg-white p-3 my-3 border-0">
+                        <div class="container">
+                            <div class="statistics__container d-flex justify-content-between align-items-center">
+                                <div class="statistics__select">
+
+                                </div>
+
+                                <h3 class="statistics__text"> Delay and penalty</h3>
+                            </div>
+                            <div class="statistics__chart">
+                                <img class="img-fluid py-3" src="assets/images/chart4.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
