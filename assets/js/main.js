@@ -70,9 +70,27 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Handle mobile menu toggle
+
     const menuToggle = document.querySelector('.mobile-menu-toggle');
     const sidebar = document.querySelector('.sidebar');
+    const body = document.querySelector('body');
 
+    function toggleClassOnResize() {
+
+        if (window.innerWidth <= 992) {
+            body.classList.add('collapsed');
+            sidebar.classList.add('collapsed');
+        } else {
+            body.classList.remove('collapsed');
+            sidebar.classList.remove('collapsed');
+        }
+    }
+
+    // Run on load
+    toggleClassOnResize();
+
+    // Run on window resize
+    window.addEventListener('resize', toggleClassOnResize);
     if (menuToggle && sidebar) {
         menuToggle.addEventListener('click', function () {
             sidebar.classList.toggle('show');
@@ -83,8 +101,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const sidebar = document.querySelector('.sidebar');
         const mainContent = document.querySelector('.main-content');
 
-        if (sidebar.style.width === 'var(--sidebar-collapsed-width)') { // Sidebar is collapsed
+        if (sidebar.style.width === 'var(--sidebar-collapsed-width)' || sidebar.classList.contains('collapsed')) { // Sidebar is collapsed
             sidebar.style.width = 'var(--sidebar-width)';
+            // mainContent.style.opacity = '0';
+            body.classList.remove('collapsed');
             sidebar.classList.remove('collapsed');
 
             mainContent.style.marginRight = 'var(--sidebar-width)';
@@ -94,7 +114,9 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             sidebar.style.width = 'var(--sidebar-collapsed-width)';
             mainContent.style.marginRight = 'var(--sidebar-collapsed-width)';
+            // mainContent.style.opacity = '1';
             sidebar.classList.add('collapsed');
+            body.classList.add('collapsed');
 
             document.querySelectorAll('.menu-text').forEach(el => el.style.display = 'none');
             document.querySelector('.sidebar__logo').style.display = 'none';
@@ -103,6 +125,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
+    document.querySelectorAll('.nav-item.dropdown li').forEach(item => {
+        item.addEventListener('click', () => {
+            if (sidebar.classList.contains('sidebar') && sidebar.classList.contains('collapsed')) {
+                sidebar.classList.remove('collapsed');
+            }
+        });
+    });
     const cameraInput = document.getElementById('cameraInput');
     const previewImage = document.getElementById('previewImage');
     // const cameraContainer = document.getElementById('cameraContainer');
@@ -200,3 +229,63 @@ function previewFile(url) {
     window.open(url, "_blank");
     console.log(url);
 }
+
+// Check localStorage for grayscale state
+if (localStorage.getItem('grayscale') === 'enabled') {
+    $('html').addClass('grayscale');
+}
+/* --- Font sizing Function --- */
+const DEFAULT_FONT_SIZE = 16;
+const MIN_FONT_SIZE = 12;
+const MAX_FONT_SIZE = 22;
+
+// Function to modify font size and store in localStorage
+function modifyFontSize(MyElement, flag) {
+    var HtmlElement = $(MyElement);
+    var currentFontSize = parseInt(HtmlElement.css('font-size')) || DEFAULT_FONT_SIZE;
+
+    if (flag == 'increase' && currentFontSize < MAX_FONT_SIZE) {
+        currentFontSize += 1;
+    } else if (flag == 'decrease' && currentFontSize > MIN_FONT_SIZE) {
+        currentFontSize -= 1;
+    } else if (flag == 'reset') {
+        currentFontSize = DEFAULT_FONT_SIZE;
+    }
+
+    HtmlElement.css('font-size', currentFontSize + 'px');
+    localStorage.setItem('fontSize', currentFontSize); // Save to localStorage
+}
+
+// Retrieve and apply stored font size on page load
+let storedFontSize = localStorage.getItem('fontSize');
+if (storedFontSize) {
+    $('html').css('font-size', storedFontSize + 'px');
+}
+
+// Event listeners
+$('.increase-font').click(function (e) {
+    e.preventDefault();
+    modifyFontSize('html', 'increase');
+});
+
+$('.decrease-font').click(function (e) {
+    e.preventDefault();
+    modifyFontSize('html', 'decrease');
+});
+console.log("sabryyyyyyyyyyyyyyyyyyyy");
+$('.reset-font').click(function (e) {
+    e.preventDefault();
+    modifyFontSize('html', 'reset');
+});
+
+// Toggle grayscale mode
+$('.toggle-grayscale').on('click', function () {
+    $('html').toggleClass('grayscale');
+
+    // Save state in localStorage
+    if ($('html').hasClass('grayscale')) {
+        localStorage.setItem('grayscale', 'enabled');
+    } else {
+        localStorage.removeItem('grayscale');
+    }
+});

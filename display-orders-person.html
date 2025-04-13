@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeLab - Employee Dashboard</title>
+    <link href="assets/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link href="assets/css/general.css" rel="stylesheet">
+    <link href="assets/css/dashboard.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="sidebar shadow-sm">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <img src="assets/images/logo.svg" alt="CodeLab Logo" class="img-fluid sidebar__logo">
+            <img src="assets/images/fav.svg" alt="CodeLab Logo" class="img-fluid sidebar__icon">
+        </div>
+
+        <nav class="nav flex-column">
+            <button class="nav-link " id="toggleSidebar">
+                <img class="nav-img" src="assets/images/icons/dashboard-square-01.svg" alt="dashboard">
+                <span class="menu-text">لوحة التحكم</span>
+            </button>
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle" href="#" id="employee" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="nav-img" src="assets/images/icons/profile-2user.svg" alt="employee">
+                    <span class="menu-text"> الموظفين </span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="employee">
+                    <li><a class="dropdown-item " href="#">جميع الموظفيين</a></li>
+                    <li><a class="dropdown-item " href="#">الاعدادات</a></li>
+                    <li><a class="dropdown-item " href="#">الاعدادات</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle" href="#" id="employeeSettings" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img class="nav-img" src="assets/images/icons/setting-2.svg" alt="employeeSettings">
+                    <span class="menu-text"> اعدادات الموظفين </span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="employeeSettings">
+                    <li><a class="dropdown-item " href="marital-status.html">الحالة الاجتماعية </a></li>
+                    <li><a class="dropdown-item " href="#">النوع</a></li>
+                    <li><a class="dropdown-item " href="#">الحالة العسكرية</a></li>
+                    <li><a class="dropdown-item " href="#">نوع العقد</a></li>
+                    <li><a class="dropdown-item " href="#">الديانة</a></li>
+                    <li><a class="dropdown-item " href="#">نوع الدوام</a></li>
+                    <li><a class="dropdown-item " href="#">الصلاحيات</a></li>
+                    <li><a class="dropdown-item " href="#">تامين</a></li>
+                    <li><a class="dropdown-item " href="#">اعدادات المرفقات</a></li>
+                    <li><a class="dropdown-item " href="#">نموذج العقد</a></li>
+                    <li><a class="dropdown-item " href="#">مدة التدريب</a></li>
+                    <li><a class="dropdown-item " href="#">اسباب فسخ العقد</a></li>
+                    <li><a class="dropdown-item " href="#">مجموعة المهام</a></li>
+                    <li><a class="dropdown-item " href="#">اضافة مهام</a></li>
+                    <li><a class="dropdown-item " href="#">التصنيف الوظيفي</a></li>
+                    <li><a class="dropdown-item " href="#">البلاد</a></li>
+                    <li><a class="dropdown-item " href="#">المدن</a></li>
+                    <li><a class="dropdown-item " href="#">المنطقة</a></li>
+                    <li><a class="dropdown-item " href="#">الجنسية</a></li>
+                    <li><a class="dropdown-item " href="#">الجامعات</a></li>
+                    <li><a class="dropdown-item " href="#">تقديرات التخرج</a></li>
+                    <li><a class="dropdown-item " href="#">درجة التخرج</a></li>
+                    <li><a class="dropdown-item " href="#">الفروع</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle show" href="#" id="attendance" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="true">
+                    <img class="nav-img" src="assets/images/icons/calendar.svg" alt="attendance">
+                    <span class="menu-text"> الحضور والانصراف </span>
+                </a>
+                <ul class="dropdown-menu show" aria-labelledby="attendance">
+                    <li><a class="dropdown-item" href="#">الاحصائيات </a></li>
+                    <li><a class="dropdown-item" href="#">حضور وانصراف الموظف </a></li>
+                    <li><a class="dropdown-item" href="#">النص الاساسي </a></li>
+                    <li><a class="dropdown-item active" href="#">الاعدادات</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle " href="#" id="salaries" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="nav-img" src="assets/images/icons/dollar-circle.svg" alt="salaries">
+                    <span class="menu-text"> المرتبات </span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="salaries">
+                    <li><a class="dropdown-item" href="#">جميع الموظفيين</a></li>
+                    <li><a class="dropdown-item" href="#">الاعدادات</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle " href="#" id="accounts" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="nav-img" src="assets/images/icons/math.svg" alt="accounts">
+                    <span class="menu-text"> الحسابات </span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="accounts">
+                    <li><a class="dropdown-item" href="#">جميع الموظفيين</a></li>
+                    <li><a class="dropdown-item" href="#">الاعدادات</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle " href="#" id="users" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="nav-img" src="assets/images/icons/user-cirlce-add.svg" alt="users">
+                    <span class="menu-text"> شؤون العاملين </span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="users">
+                    <li><a class="dropdown-item" href="#">جميع الموظفيين</a></li>
+                    <li><a class="dropdown-item" href="#">الاعدادات</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle " href="#" id="inventories" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="nav-img" src="assets/images/icons/3dcube.svg" alt="inventories">
+                    <span class="menu-text"> برنامج المخازن </span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="inventories">
+                    <li><a class="dropdown-item" href="#">جميع الموظفيين</a></li>
+                    <li><a class="dropdown-item" href="#">الاعدادات</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle " href="#" id="purchases" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="nav-img" src="assets/images/icons/receipt-item.svg" alt="purchases">
+                    <span class="menu-text"> المشتريات </span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="purchases">
+                    <li><a class="dropdown-item" href="#">جميع الموظفيين</a></li>
+                    <li><a class="dropdown-item" href="#">الاعدادات</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle " href="#" id="assets" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="nav-img" src="assets/images/icons/receipt-item.svg" alt="assets">
+                    <span class="menu-text"> الاصول الثابة والت.. </span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="assets">
+                    <li><a class="dropdown-item" href="#">جميع الموظفيين</a></li>
+                    <li><a class="dropdown-item" href="#">الاعدادات</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle " href="#" id="peaple" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="nav-img" src="assets/images/icons/people.svg" alt="peaple">
+                    <span class="menu-text"> بوابة العملاء</span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="peaple">
+                    <li><a class="dropdown-item" href="#">جميع الموظفيين</a></li>
+                    <li><a class="dropdown-item" href="#">الاعدادات</a></li>
+                </ul>
+            </li>
+            <li class="nav-item mt-3">
+                <span class="nav-link nav-link__settings menu-text">
+                    التفضيلات
+                </span>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="#" id="notifications" role="button">
+                    <img class="nav-img" src="assets/images/icons/notification-bing.svg" alt="notifications">
+                    <span class="menu-text"> الاشعارات </span>
+                </a>
+            </li>
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle " href="#" id="settings" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="nav-img" src="assets/images/icons/setting-2.svg" alt="settings">
+                    <span class="menu-text"> الاعدادات</span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="peaple">
+                    <li><a class="dropdown-item" href="#">جميع الموظفيين</a></li>
+                    <li><a class="dropdown-item" href="#">الاعدادات</a></li>
+                </ul>
+            </li>
+
+            <!-- Add more menu items -->
+        </nav>
+        <div class="navbar__logo nav-item navbar__logo--sidebar  d-flex align-items-center gap-3">
+            <a href="#" class="nav-link bordered border-3 " id="settings" role="button" aria-expanded="false">
+                <div class="navbar__logo-icon">
+                    <img src="assets/images/icons/chat-icon.svg" alt="chat-icon" width="100%" height="30">
+                </div>
+                <div class="navbar__logo-text">
+                    <span class="navbar__logo-title d-block fw-bold text-dark">CodeLab</span>
+                    <span class="navbar__logo-subtitle d-block text-muted">الموارد البشرية</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <div class="navbar bg-white border-bottom py-3 d-flex align-items-center justify-content-between">
+            <div class="container">
+                <div class="navbar__title">
+                    <span class="navbar__title-main d-block fw-bold text-dark">الاعدادات</span>
+                    <div class="navbar__title-sub-container">
+                        <a href="#" class="navbar__title-sub "> الحضور والانصراف </a>
+                        <span class="navbar__title-sub  "> الاعدادات </span>
+                    </div>
+                </div>
+                <div class="navbar__actions d-flex align-items-center gap-2">
+                    <button class="navbar__action-btn btn btn-light rounded" aria-label="Search">
+                        <img src="assets/images/icons/language-square.svg" alt="language">
+                    </button>
+                    <button class="navbar__action-btn btn btn-light rounded" aria-label="Notification">
+                        <img src="assets/images/icons/notification-bing.svg" alt="notification-bing">
+                    </button>
+                    <button class="navbar__action-btn btn btn-light rounded" aria-label="Settings">
+                        <img src="assets/images/icons/sms-tracking.svg" alt="sms-tracking">
+                    </button>
+                </div>
+
+                <div class="navbar__logo nav-item dropdown d-flex align-items-center gap-3">
+                    <a href="#" class="nav-link bordered border-3 dropdown-toggle" id="settings" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="navbar__logo-icon">
+                            <img src="assets/images/avatar.svg" alt="CodeLab" width="50" height="50">
+                        </div>
+                        <div class="navbar__logo-text">
+                            <span class="navbar__logo-title d-block fw-bold text-dark">CodeLab</span>
+                            <span class="navbar__logo-subtitle d-block text-muted">الموارد البشرية</span>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu mt-3" aria-labelledby="settings" data-popper-placement="bottom-end"
+                        style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate3d(0px, 54.4px, 0px);">
+                        <li><a class="dropdown-item active" href="#">تعديل الملف الشخصي</a></li>
+                        <li><a class="dropdown-item " href="#">تسجيل الخروج</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="card bg-white border-0 p-3 justify-content-between d-flex flex-row my-3 align-items-center">
+                <div class="card__content ms-4 ">
+                    <h5 class="card__title text-dark fw-bold">عرض طلبات التابعيين </h5>
+                    <p class="card__description text-muted">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء.</p>
+                </div>
+                <div class="card__image">
+                    <img src="assets/images/icons/business-meeting.svg" alt="business-meeting" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="card bg-white my-3 border-0">
+                <ul class="nav nav-pills tabs" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-orders-management-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-orders-management" type="button" role="tab"
+                            aria-controls="pills-orders-management" aria-selected="true">الادارات والماموريات</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-orders-permission-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-orders-permission" type="button" role="tab"
+                            aria-controls="pills-orders-permission" aria-selected="false" tabindex="-1">
+                            الاذونات
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-orders-cancel-late-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-orders-cancel-late" type="button" role="tab"
+                            aria-controls="pills-orders-cancel-late" aria-selected="false" tabindex="-1">
+                            طلب الغاء تاخير
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-orders-work-permission-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-orders-work-permission" type="button" role="tab"
+                            aria-controls="pills-orders-work-permission" aria-selected="false" tabindex="-1">
+                            اذن عمل
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade active show" id="pills-orders-management" role="tabpanel"
+                    aria-labelledby="pills-orders-management-tab">
+
+                    <div class="dashboard">
+                        <div class="container py-4">
+                            <!-- Header Actions -->
+                            <div class="dashboard__actions mb-4 d-flex justify-content-between align-items-center">
+                                <div class="dashboard__search d-flex">
+                                    <input type="search" class="form-control" placeholder="البحث">
+                                    <button class="align-items-center btn btn-outline-secondary d-flex gap-2 mx-3 p-2">
+                                        تصفية
+                                        <span class="me-2"><img src="assets/images/icons/setting.svg"
+                                                alt="import"></span>
+                                    </button>
+                                </div>
+                                <div class="d-flex align-items-center gap-3">
+                                    <button class="btn btn-outline-secondary ">
+                                        <img src="assets/images/icons/excel.svg" alt="excel">
+                                        طباعة اكسيل
+
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            <!-- Table -->
+                            <div class="table-responsive">
+                                <table class="table employee-table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <input type="checkbox" class="form-check-input">
+                                            </th>
+                                            <th>#</th>
+                                            <th>اسم الموظف</th>
+                                            <th>الدور الوظيفي</th>
+                                            <th>القسم </th>
+                                            <th>الوحدة</th>
+                                            <th>نوع الطلب</th>
+                                            <th>الحالة</th>
+                                            <th>تاريخ الطلب</th>
+                                            <th>
+                                                <img class="employee-table__icon img-fluid"
+                                                    src="assets/images/icons/grid-edit.svg" alt="grid-edit">
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox" class="form-check-input"></td>
+                                            <td>1</td>
+                                            <td>
+                                                <div class="employee-info">
+                                                    <img src="assets/images/avatar.svg" class="employee-info__avatar"
+                                                        alt="">
+
+                                                    <span> علي</span>
+                                                </div>
+                                            </td>
+                                            <td>الشؤون الإدارية</td>
+                                            <td>الادارة العليا</td>
+                                            <td>إدارة الشؤون الإدارية</td>
+                                            <td>القاهرة</td>
+                                            <td><span class="badge status-badge status-badge--active">نشط</span></td>
+                                            <td>31 Jun, 2024</td>
+                                            <td>
+                                                <!-- <button class="btn btn-link">⋮</button> -->
+                                                <div class="btn-group">
+                                                    <button class="btn btn-outline-secondary dropdown-toggle"
+                                                        type="button" id="defaultDropdown" data-bs-toggle="dropdown"
+                                                        data-bs-auto-close="true" aria-expanded="false">
+                                                        ⋮
+                                                    </button>
+                                                    <ul class="dropdown-menu  dropdown-custom" aria-labelledby="defaultDropdown">
+                                                        <li><a class="dropdown-item valid" href="#">
+                                                            <img class="me-2" src="assets/images/icons/clipboard-tick.svg" alt="eye"> قبول الطلب
+                                                        </a></li>
+                                                        <li><a class="dropdown-item edit" href="#">
+                                                            <img class="me-2" src="assets/images/icons/edit-menu.svg" alt="edit"> تدقيق مسبق
+                                                        </a></li>
+                                                        <li><a class="dropdown-item invalid" href="#">
+                                                            <img class="me-2" src="assets/images/icons/clipboard-close.svg" alt="delete"> رفض الطلب
+                                                        </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" class="form-check-input"></td>
+                                            <td>1</td>
+                                            <td>
+                                                <div class="employee-info">
+                                                    <img src="assets/images/avatar.svg" class="employee-info__avatar"
+                                                        alt="">
+
+                                                    <span> علي</span>
+                                                </div>
+                                            </td>
+                                            <td>الشؤون الإدارية</td>
+                                            <td>الادارة العليا</td>
+                                            <td>إدارة الشؤون الإدارية</td>
+                                            <td>القاهرة</td>
+                                            <td><span class="badge status-badge status-badge--pending">موقوف</span></td>
+                                           <td>31 Jun, 2024</td>
+                                            <td>
+                                                <!-- <button class="btn btn-link">⋮</button> -->
+                                                <div class="btn-group">
+                                                    <button class="btn btn-outline-secondary dropdown-toggle"
+                                                        type="button" id="defaultDropdown" data-bs-toggle="dropdown"
+                                                        data-bs-auto-close="true" aria-expanded="false">
+                                                        ⋮
+                                                    </button>
+                                                    <ul class="dropdown-menu  dropdown-custom" aria-labelledby="defaultDropdown">
+                                                        <li><a class="dropdown-item valid" href="#">
+                                                            <img class="me-2" src="assets/images/icons/clipboard-tick.svg" alt="eye"> قبول الطلب
+                                                        </a></li>
+                                                        <li><a class="dropdown-item edit" href="#">
+                                                            <img class="me-2" src="assets/images/icons/edit-menu.svg" alt="edit"> تدقيق مسبق
+                                                        </a></li>
+                                                        <li><a class="dropdown-item invalid" href="#">
+                                                            <img class="me-2" src="assets/images/icons/clipboard-close.svg" alt="delete"> رفض الطلب
+                                                        </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" class="form-check-input"></td>
+                                            <td>1</td>
+                                            <td>
+                                                <div class="employee-info">
+                                                    <img src="assets/images/avatar.svg" class="employee-info__avatar"
+                                                        alt="">
+
+                                                    <span> علي</span>
+                                                </div>
+                                            </td>
+                                            <td>الشؤون الإدارية</td>
+                                            <td>الادارة العليا</td>
+                                            <td>إدارة الشؤون الإدارية</td>
+                                            <td>القاهرة</td>
+                                            <td><span class="badge status-badge status-badge--pending">موقوف</span></td>
+                                           <td>31 Jun, 2024</td>
+                                            <td>
+                                                <!-- <button class="btn btn-link">⋮</button> -->
+                                                <div class="btn-group">
+                                                    <button class="btn btn-outline-secondary dropdown-toggle"
+                                                        type="button" id="defaultDropdown" data-bs-toggle="dropdown"
+                                                        data-bs-auto-close="true" aria-expanded="false">
+                                                        ⋮
+                                                    </button>
+                                                    <ul class="dropdown-menu  dropdown-custom" aria-labelledby="defaultDropdown">
+                                                        <li><a class="dropdown-item valid" href="#">
+                                                            <img class="me-2" src="assets/images/icons/clipboard-tick.svg" alt="eye"> قبول الطلب
+                                                        </a></li>
+                                                        <li><a class="dropdown-item edit" href="#">
+                                                            <img class="me-2" src="assets/images/icons/edit-menu.svg" alt="edit"> تدقيق مسبق
+                                                        </a></li>
+                                                        <li><a class="dropdown-item invalid" href="#">
+                                                            <img class="me-2" src="assets/images/icons/clipboard-close.svg" alt="delete"> رفض الطلب
+                                                        </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- Repeat similar rows for other employees -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Pagination -->
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <div class="pagination-info">
+                                    عرض 1 من 10 النتائج 66
+                                </div>
+                                <nav>
+                                    <ul class="pagination">
+                                        <li class="page-item"><a class="page-link" href="#">&lt;</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">&gt;</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="tab-pane fade" id="pills-orders-permission" role="tabpanel"
+                    aria-labelledby="pills-orders-permission-tab">
+                    <div class="dashboard">
+                        <div class="container py-4">
+                            <!-- Header Actions -->
+                            <div class="dashboard__actions mb-4 d-flex justify-content-between align-items-center">
+                                <div class="dashboard__search d-flex">
+                                    <input type="search" class="form-control" placeholder="البحث">
+                                    <button class="align-items-center btn btn-outline-secondary d-flex gap-2 mx-3 p-2">
+                                        تصفية
+                                        <span class="me-2"><img src="assets/images/icons/setting.svg"
+                                                alt="import"></span>
+                                    </button>
+                                </div>
+                                <div class="d-flex align-items-center gap-3">
+                                    <button class="btn btn-outline-secondary ">
+                                        <img src="assets/images/icons/excel.svg" alt="excel">
+                                        طباعة اكسيل
+
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            <!-- Table -->
+                            <div class="table-responsive">
+                                <table class="table employee-table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <input type="checkbox" class="form-check-input">
+                                            </th>
+                                            <th>#</th>
+                                            <th>اسم الموظف</th>
+                                            <th>الدور الوظيفي</th>
+                                            <th>القسم </th>
+                                            <th>الوحدة</th>
+                                            <th>نوع الطلب</th>
+                                            <th>الحالة</th>
+                                            <th>تاريخ الطلب</th>
+                                            <th>
+                                                <img class="employee-table__icon img-fluid"
+                                                    src="assets/images/icons/grid-edit.svg" alt="grid-edit">
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox" class="form-check-input"></td>
+                                            <td>1</td>
+                                            <td>
+                                                <div class="employee-info">
+                                                    <img src="assets/images/avatar.svg" class="employee-info__avatar"
+                                                        alt="">
+
+                                                    <span> علي</span>
+                                                </div>
+                                            </td>
+                                            <td>الشؤون الإدارية</td>
+                                            <td>الادارة العليا</td>
+                                            <td>إدارة الشؤون الإدارية</td>
+                                            <td>القاهرة</td>
+                                            <td><span class="badge status-badge status-badge--active">نشط</span></td>
+                                            <td>31 Jun, 2024</td>
+                                            <td>
+                                                <!-- <button class="btn btn-link">⋮</button> -->
+                                                <div class="btn-group">
+                                                    <button class="btn btn-outline-secondary dropdown-toggle"
+                                                        type="button" id="defaultDropdown" data-bs-toggle="dropdown"
+                                                        data-bs-auto-close="true" aria-expanded="false">
+                                                        ⋮
+                                                    </button>
+                                                    <ul class="dropdown-menu  dropdown-custom" aria-labelledby="defaultDropdown">
+                                                        <li><a class="dropdown-item valid" href="#">
+                                                            <img class="me-2" src="assets/images/icons/clipboard-tick.svg" alt="eye"> قبول الطلب
+                                                        </a></li>
+                                                        <li><a class="dropdown-item edit" href="#">
+                                                            <img class="me-2" src="assets/images/icons/edit-menu.svg" alt="edit"> تدقيق مسبق
+                                                        </a></li>
+                                                        <li><a class="dropdown-item invalid" href="#">
+                                                            <img class="me-2" src="assets/images/icons/clipboard-close.svg" alt="delete"> رفض الطلب
+                                                        </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" class="form-check-input"></td>
+                                            <td>1</td>
+                                            <td>
+                                                <div class="employee-info">
+                                                    <img src="assets/images/avatar.svg" class="employee-info__avatar"
+                                                        alt="">
+
+                                                    <span> علي</span>
+                                                </div>
+                                            </td>
+                                            <td>الشؤون الإدارية</td>
+                                            <td>الادارة العليا</td>
+                                            <td>إدارة الشؤون الإدارية</td>
+                                            <td>القاهرة</td>
+                                            <td><span class="badge status-badge status-badge--pending">موقوف</span></td>
+                                           <td>31 Jun, 2024</td>
+                                            <td>
+                                                <!-- <button class="btn btn-link">⋮</button> -->
+                                                <div class="btn-group">
+                                                    <button class="btn btn-outline-secondary dropdown-toggle"
+                                                        type="button" id="defaultDropdown" data-bs-toggle="dropdown"
+                                                        data-bs-auto-close="true" aria-expanded="false">
+                                                        ⋮
+                                                    </button>
+                                                    <ul class="dropdown-menu  dropdown-custom" aria-labelledby="defaultDropdown">
+                                                        <li><a class="dropdown-item valid" href="#">
+                                                            <img class="me-2" src="assets/images/icons/clipboard-tick.svg" alt="eye"> قبول الطلب
+                                                        </a></li>
+                                                        <li><a class="dropdown-item edit" href="#">
+                                                            <img class="me-2" src="assets/images/icons/edit-menu.svg" alt="edit"> تدقيق مسبق
+                                                        </a></li>
+                                                        <li><a class="dropdown-item invalid" href="#">
+                                                            <img class="me-2" src="assets/images/icons/clipboard-close.svg" alt="delete"> رفض الطلب
+                                                        </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" class="form-check-input"></td>
+                                            <td>1</td>
+                                            <td>
+                                                <div class="employee-info">
+                                                    <img src="assets/images/avatar.svg" class="employee-info__avatar"
+                                                        alt="">
+
+                                                    <span> علي</span>
+                                                </div>
+                                            </td>
+                                            <td>الشؤون الإدارية</td>
+                                            <td>الادارة العليا</td>
+                                            <td>إدارة الشؤون الإدارية</td>
+                                            <td>القاهرة</td>
+                                            <td><span class="badge status-badge status-badge--pending">موقوف</span></td>
+                                           <td>31 Jun, 2024</td>
+                                            <td>
+                                                <!-- <button class="btn btn-link">⋮</button> -->
+                                                <div class="btn-group">
+                                                    <button class="btn btn-outline-secondary dropdown-toggle"
+                                                        type="button" id="defaultDropdown" data-bs-toggle="dropdown"
+                                                        data-bs-auto-close="true" aria-expanded="false">
+                                                        ⋮
+                                                    </button>
+                                                    <ul class="dropdown-menu  dropdown-custom" aria-labelledby="defaultDropdown">
+                                                        <li><a class="dropdown-item valid" href="#">
+                                                            <img class="me-2" src="assets/images/icons/clipboard-tick.svg" alt="eye"> قبول الطلب
+                                                        </a></li>
+                                                        <li><a class="dropdown-item edit" href="#">
+                                                            <img class="me-2" src="assets/images/icons/edit-menu.svg" alt="edit"> تدقيق مسبق
+                                                        </a></li>
+                                                        <li><a class="dropdown-item invalid" href="#">
+                                                            <img class="me-2" src="assets/images/icons/clipboard-close.svg" alt="delete"> رفض الطلب
+                                                        </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- Repeat similar rows for other employees -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Pagination -->
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <div class="pagination-info">
+                                    عرض 1 من 10 النتائج 66
+                                </div>
+                                <nav>
+                                    <ul class="pagination">
+                                        <li class="page-item"><a class="page-link" href="#">&lt;</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">&gt;</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="tab-pane fade" id="pills-orders-cancel-late" role="tabpanel"
+                    aria-labelledby="pills-orders-cancel-late-tab">
+
+                    <section class="form-section ">
+                        <div class="card bg-white p-3 my-3 border-0">
+                            <div class="container">
+                                <form>
+                                    <h5 class="text-primary fs-6 my-3">اللوائح </h5>
+                                    <div class="row gy-3">
+                                        <div class="col-md-4 my-2">
+                                            <label for="files" class="form-label"> الاسم </label>
+                                            <div class="d-flex">
+                                                <input type="number" class="form-control" id="files"
+                                                    placeholder="العدد">
+                                                <button class="btn btn-gray ms-2">
+                                                    <img src="assets/images/icons/setting.svg" alt="setting">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 my-2">
+                                            <label for="addFile" class="form-label"> تحميل ملف </label>
+                                            <div class="d-flex">
+                                                <input type="number" class="form-control" id="addFile"
+                                                    placeholder="القيمة">
+                                                <button class="btn btn-gray ms-2">
+                                                    <img src="assets/images/icons/setting.svg" alt="setting">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="form-section ">
+                        <div class="card bg-white p-3 my-3 border-0">
+                            <div class="container">
+                                <form>
+                                    <h5 class="text-primary fs-6 my-3">الملفات </h5>
+                                    <div class="row gy-3">
+                                        <div class="col-md-4 my-2">
+                                            <label for="attendanceRegulations" class="form-label">لوائح الحضور </label>
+                                            <select class="form-select" id="attendanceRegulations">
+                                                <option selected="">اختر من القائمة </option>
+                                                <option value="1">مدير</option>
+                                                <option value="3">مسؤل توظيف</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 my-2">
+                                            <label for="attendanceRegulations" class="form-label">لوائح الحضور </label>
+                                            <select class="form-select" id="attendanceRegulations">
+                                                <option selected="">اختر من القائمة </option>
+                                                <option value="1">مدير</option>
+                                                <option value="3">مسؤل توظيف</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 my-2">
+                                            <label for="attendanceRegulations" class="form-label">لوائح الحضور </label>
+                                            <select class="form-select" id="attendanceRegulations">
+                                                <option selected="">اختر من القائمة </option>
+                                                <option value="1">مدير</option>
+                                                <option value="3">مسؤل توظيف</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-12 my-2">
+                                            <h5 class="text-primary fs-6 my-3">اجازة غير مدفوعة الاجر </h5>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckCheckedDisabled">
+                                                <label class="form-check-label" for="flexCheckCheckedDisabled">
+                                                    منح اجازة غير مدفوعة الاجر
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 my-2">
+                                            <label for="attendanceRegulations" class="form-label">نوع الاجازة </label>
+                                            <select class="form-select" id="attendanceRegulations">
+                                                <option selected="">اختر من القائمة </option>
+                                                <option value="1">مدير</option>
+                                                <option value="3">مسؤل توظيف</option>
+                                            </select>
+                                        </div>
+                                        <!-- appointment Date -->
+                                        <div class="col-md-6 my-2">
+                                            <label for="appointmentDate" class="form-label"> تاريخ الاجازة </label>
+                                            <input type="date" class="form-control" id="appointmentDate">
+                                        </div>
+                                        <div class="col-md-12 my-2 d-flex justify-content-end mt-3">
+                                            <button class="btn btn-outline-secondary mx-3">الغاء</button>
+                                            <button class="btn btn-primary">التالي</button>
+
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="tab-pane fade" id="pills-orders-work-permission" role="tabpanel"
+                    aria-labelledby="pills-orders-work-permission-tab">
+                    <div class="container">
+                        <h1>hiiiiiii</h1>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="card dashboard py-3 bg-white my-3 border-0">
+                <div class="container">
+                    <div class="dashboard__actions mb-4 d-flex justify-content-between align-items-center">
+                        <div class="dashboard__search">
+                            <h5 class="text-primary fs-5">بحث وتصفية</h5>
+                        </div>
+                        <button class="btn btn-primary dashboard__add-btn">
+                            <span class="me-2"><img src="assets/images/icons/add-circle.svg" alt="add"></span>
+                            إضافة جديد
+                        </button>
+                    </div>
+                    <form>
+                        <div class="row gy-3">
+                            <div class="col-md-6 my-2">
+                                <label for="country" class="form-label">اسم الموظف</label>
+                                <select class="form-select" id="country">
+                                    <option selected="">اختر الاسم</option>
+                                    <option value="1">احمد</option>
+                                    <option value="2">مصطفي</option>
+                                </select>
+                            </div>
+                            <!-- Code -->
+                            <div class="col-md-6 my-2">
+                                <label for="code" class="form-label">التاريخ</label>
+                                <input type="date" class="form-control" id="appointmentDate"> </div>
+                        </div>
+
+                    </form>
+                    <div class="col-md-12 my-2 d-flex justify-content-end mt-3">
+                        <button class="btn btn-primary" disabled>عرض</button>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="card dashboard py-3 bg-white my-3 border-0">
+                <div class="container">
+                    <div class="dashboard__actions mb-4 d-flex justify-content-between align-items-center">
+                        <div class="dashboard__search">
+                        </div>
+                        <button class="btn btn-primary dashboard__add-btn">
+                            <span class="me-2"><img src="assets/images/icons/add-circle.svg" alt="add"></span>
+                            إضافة جديد
+                        </button>
+                    </div>
+
+
+                    <div class="table-responsive">
+                        <table class="table employee-table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <input type="checkbox" class="form-check-input">
+                                    </th>
+                                    <th>#</th>
+                                    <th>الوقت من </th>
+                                    <th>الوقت الي </th>
+                                    <th>الحالة</th>
+                                    <th>التعليق</th>
+                                    <th class="text-center">
+                                        <img class="employee-table__icon img-fluid"
+                                            src="assets/images/icons/grid-edit.svg" alt="grid-edit">
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" class="form-check-input"></td>
+                                    <td>1</td>
+                                    <td><input type="text" class="form-control form-time" placeholder="الوقت من"></td>
+                                    <td><input type="text" class="form-control form-time" placeholder="الوقت الي"></td>
+                                    <td><select class="form-select" id="country">
+                                            <option selected="">الحالة </option>
+                                            <option value="1">نشط</option>
+                                            <option value="2">غير نشط</option>
+                                        </select></td>
+                                    <td><input type="text" class="form-control" id="statusAr" value=""
+                                            placeholder="اضف تعليقك"></td>
+                                    <td>
+                                        <!-- <button class="btn btn-link">⋮</button> -->
+                                        <div class="btn-group">
+                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                                                id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true"
+                                                aria-expanded="false">
+                                                ⋮
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="form-check-input"></td>
+                                    <td>1</td>
+                                    <td><input type="text" class="form-control form-time" placeholder="الوقت من"></td>
+                                    <td><input type="text" class="form-control form-time" placeholder="الوقت الي"></td>
+                                    <td><select class="form-select" id="country">
+                                            <option selected="">الحالة </option>
+                                            <option value="1">نشط</option>
+                                            <option value="2">غير نشط</option>
+                                        </select></td>
+                                    <td><input type="text" class="form-control" id="statusAr" value=""
+                                            placeholder="اضف تعليقك"></td>
+                                    <td>
+                                        <!-- <button class="btn btn-link">⋮</button> -->
+                                        <div class="btn-group">
+                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                                                id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true"
+                                                aria-expanded="false">
+                                                ⋮
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="form-check-input"></td>
+                                    <td>1</td>
+                                    <td><input type="text" class="form-control form-time" placeholder="الوقت من"></td>
+                                    <td><input type="text" class="form-control form-time" placeholder="الوقت الي"></td>
+                                    <td><select class="form-select" id="country">
+                                            <option selected="">الحالة </option>
+                                            <option value="1">نشط</option>
+                                            <option value="2">غير نشط</option>
+                                        </select></td>
+                                    <td><input type="text" class="form-control" id="statusAr" value=""
+                                            placeholder="اضف تعليقك"></td>
+                                    <td>
+                                        <!-- <button class="btn btn-link">⋮</button> -->
+                                        <div class="btn-group">
+                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                                                id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true"
+                                                aria-expanded="false">
+                                                ⋮
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="form-check-input"></td>
+                                    <td>1</td>
+                                    <td><input type="text" class="form-control form-time" placeholder="الوقت من"></td>
+                                    <td><input type="text" class="form-control form-time" placeholder="الوقت الي"></td>
+                                    <td><select class="form-select" id="country">
+                                            <option selected="">الحالة </option>
+                                            <option value="1">نشط</option>
+                                            <option value="2">غير نشط</option>
+                                        </select></td>
+                                    <td><input type="text" class="form-control" id="statusAr" value=""
+                                            placeholder="اضف تعليقك"></td>
+                                    <td>
+                                        <!-- <button class="btn btn-link">⋮</button> -->
+                                        <div class="btn-group">
+                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                                                id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true"
+                                                aria-expanded="false">
+                                                ⋮
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Pagination -->
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                        <div class="pagination-info">
+                            عرض 1 من 10 النتائج 66
+                        </div>
+                        <nav>
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#">&lt;</a></li>
+                                <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">&gt;</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>
